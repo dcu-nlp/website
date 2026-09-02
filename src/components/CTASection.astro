@@ -1,0 +1,59 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  primaryLabel: string;
+  primaryHref: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+}
+
+const {
+  title,
+  description,
+  primaryLabel,
+  primaryHref,
+  secondaryLabel,
+  secondaryHref,
+} = Astro.props;
+---
+
+<section class="section-space pt-0">
+  <div class="container-shell">
+    <div
+      class="surface relative overflow-hidden flex flex-col gap-6 px-5 py-8 sm:px-8 sm:py-10 lg:flex-row lg:items-center lg:justify-between lg:px-12"
+    >
+      <div
+        class="absolute -right-10 -top-8 hidden h-28 w-28 rounded-full border border-accent-400/20 bg-accent-400/10 sm:block"
+      >
+      </div>
+      <div class="max-w-3xl">
+        <p class="eyebrow">Join and Collaborate</p>
+        <h2
+          class="mt-4 text-[clamp(2rem,7vw,2.8rem)] leading-[1.02] text-ink-900"
+        >
+          {title}
+        </h2>
+        <p class="mt-4 text-base leading-8 text-ink-600">{description}</p>
+      </div>
+      <div class="flex flex-col gap-4 sm:flex-row">
+        <a
+          class="inline-flex items-center justify-center rounded-full bg-ink-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-accent-600"
+          href={primaryHref}
+        >
+          {primaryLabel}
+        </a>
+        {
+          secondaryHref && secondaryLabel && (
+            <a
+              class="inline-flex items-center justify-center rounded-full border border-ink-200 bg-white px-6 py-3 text-sm font-semibold text-ink-900 transition hover:border-accent-400 hover:text-accent-600"
+              href={secondaryHref}
+            >
+              {secondaryLabel}
+            </a>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</section>

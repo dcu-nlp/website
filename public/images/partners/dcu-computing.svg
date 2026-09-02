@@ -1,0 +1,7 @@
+<svg width="320" height="96" viewBox="0 0 320 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="320" height="96" rx="24" fill="#F4F6FB"/>
+<rect x="28" y="24" width="56" height="48" rx="18" fill="#DDE6F0"/>
+<path d="M45 38H67V45H53V49H65V56H53V60H67V67H45V38Z" fill="#0D1524"/>
+<text x="104" y="44" fill="#4A5568" font-family="Arial, sans-serif" font-size="17" font-weight="700">School of</text>
+<text x="104" y="65" fill="#4A5568" font-family="Arial, sans-serif" font-size="20" font-weight="700">Computing</text>
+</svg>

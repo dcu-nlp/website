@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import PageHero from '@/components/PageHero.astro';
+import ProjectCard from '@/components/ProjectCard.astro';
+
+const projects = await getCollection('projects');
+---
+
+<Layout
+  title="Projects"
+  description="Research projects, collaborations, and prototypes from the group."
+>
+  <PageHero
+    eyebrow="Projects"
+    title="Projects that connect foundational NLP with deployed impact"
+    description="The group's public project portfolio spans child online safety, cyberbullying benchmarks, and applied language technology."
+  />
+  <section class="section-space">
+    <div class="container-shell grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+</Layout>

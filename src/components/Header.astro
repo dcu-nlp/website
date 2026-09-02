@@ -1,0 +1,77 @@
+---
+import { siteConfig } from '@/utils/site';
+import { getSiteHref } from '@/utils/urls';
+
+const homeHref = getSiteHref('/');
+---
+
+<header
+  class="sticky top-0 z-50 border-b border-white/70 bg-white/80 backdrop-blur-2xl"
+>
+  <div
+    class="container-shell flex items-center justify-between gap-3 py-3 sm:gap-6 sm:py-4"
+  >
+    <a
+      class="group flex min-w-0 flex-1 items-center lg:flex-none"
+      href={homeHref}
+    >
+      <span
+        role="img"
+        aria-label={siteConfig.title}
+        class="brand-logo h-14 w-[11.5rem] max-w-full transition-transform duration-300 group-hover:-translate-y-0.5 sm:h-16 sm:w-[15rem] lg:h-20 lg:w-[19rem]"
+      ></span>
+    </a>
+
+    <nav aria-label="Primary" class="hidden items-center gap-1 xl:flex">
+      {
+        siteConfig.nav.map((item) => {
+          return (
+            <a
+              href={getSiteHref(item.href)}
+              class="rounded-full px-4 py-2 text-sm font-medium text-ink-600 transition-all duration-200 hover:bg-ink-50 hover:text-accent-600"
+            >
+              {item.label}
+            </a>
+          );
+        })
+      }
+    </nav>
+
+    <div class="hidden items-center gap-3 lg:flex">
+      <a href={getSiteHref('/contact')} class="button-primary"> Collaborate </a>
+    </div>
+
+    <details class="mobile-nav relative lg:hidden">
+      <summary
+        class="mobile-nav__toggle list-none rounded-full border border-ink-200 bg-white px-4 py-2 text-sm font-semibold text-ink-900"
+      >
+        <span>Menu</span>
+        <span aria-hidden="true" class="text-base leading-none">+</span>
+      </summary>
+      <div
+        class="mobile-nav__panel absolute right-0 mt-3 rounded-[1.75rem] border border-ink-100 bg-white p-3 shadow-2xl"
+      >
+        <nav aria-label="Mobile" class="grid gap-1">
+          {
+            siteConfig.nav.map((item) => {
+              return (
+                <a
+                  href={getSiteHref(item.href)}
+                  class="rounded-2xl px-4 py-3 text-sm font-medium text-ink-600 hover:bg-ink-50 hover:text-accent-600"
+                >
+                  {item.label}
+                </a>
+              );
+            })
+          }
+          <a
+            href={getSiteHref('/contact')}
+            class="mt-2 inline-flex items-center justify-center rounded-2xl bg-accent-500 px-4 py-3 text-sm font-semibold text-white"
+          >
+            Collaborate
+          </a>
+        </nav>
+      </div>
+    </details>
+  </div>
+</header>

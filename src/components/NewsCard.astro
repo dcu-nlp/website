@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getEntrySlug } from '@/utils/content';
+import { getSiteHref } from '@/utils/urls';
+
+interface Props {
+  item: CollectionEntry<'news'>;
+}
+
+const { item } = Astro.props;
+const { data } = item;
+const slug = getEntrySlug(item);
+---
+
+<article class="card-surface h-full p-6">
+  <div class="flex items-center justify-between gap-4">
+    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-accent-600">
+      {data.category}
+    </p>
+    <time class="text-sm text-ink-400" datetime={data.date.toISOString()}
+      >{
+        data.date.toLocaleDateString('en-IE', {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+        })
+      }</time
+    >
+  </div>
+  <h3 class="mt-4 text-2xl text-ink-900">
+    <a class="hover:text-accent-600" href={getSiteHref(`/news/${slug}/`)}>
+      {data.title}
+    </a>
+  </h3>
+  <p class="mt-4 text-sm leading-7 text-ink-600">{data.summary}</p>
+</article>

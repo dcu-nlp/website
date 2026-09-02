@@ -1,0 +1,26 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getEntrySlug } from '@/utils/content';
+import { getSiteHref } from '@/utils/urls';
+
+interface Props {
+  course: CollectionEntry<'teaching'>;
+}
+
+const { course } = Astro.props;
+const { data } = course;
+const slug = getEntrySlug(course);
+---
+
+<article class="card-surface h-full p-6">
+  <p class="text-xs font-semibold uppercase tracking-[0.2em] text-accent-600">
+    {data.term}
+  </p>
+  <h3 class="mt-4 text-2xl text-ink-900">
+    <a class="hover:text-accent-600" href={getSiteHref(`/teaching/${slug}/`)}>
+      {data.title}
+    </a>
+  </h3>
+  <p class="mt-2 text-sm font-medium text-ink-500">{data.role}</p>
+  <p class="mt-4 text-sm leading-7 text-ink-600">{data.summary}</p>
+</article>

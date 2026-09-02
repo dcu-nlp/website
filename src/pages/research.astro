@@ -1,0 +1,127 @@
+---
+import { getCollection } from 'astro:content';
+import Card from '@/components/Card.astro';
+import PageHero from '@/components/PageHero.astro';
+import ProjectCard from '@/components/ProjectCard.astro';
+import PublicationCard from '@/components/PublicationCard.astro';
+import SectionHeader from '@/components/SectionHeader.astro';
+import Layout from '@/layouts/Layout.astro';
+import { pickEntriesBySlug } from '@/utils/content';
+import {
+  getFeaturedPublications,
+  mergePublications,
+} from '@/utils/publications';
+import { siteConfig } from '@/utils/site';
+import { getSiteHref } from '@/utils/urls';
+
+const [projects, publications] = await Promise.all([
+  getCollection('projects'),
+  getCollection('publications'),
+]);
+
+const featuredProjects = pickEntriesBySlug(
+  projects,
+  siteConfig.homeFeatured.projects,
+);
+
+const featuredPublications = getFeaturedPublications(
+  mergePublications(publications),
+  3,
+);
+---
+
+<Layout
+  title="Research"
+  description="Research themes and selected work from the NLP Applications Group."
+>
+  <PageHero
+    eyebrow="Research"
+    title="Research themes grounded in language technology, evaluation, and use"
+    description="The group’s work combines core NLP research with evaluation, deployment, and collaboration questions that matter beyond the lab."
+  />
+
+  <section class="section-space">
+    <div class="container-shell">
+      <SectionHeader
+        title="Research themes"
+        description="These themes connect the group's publications, project work, supervision, and external collaborations."
+      />
+      <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        {
+          siteConfig.researchThemes.map((theme) => (
+            <Card title={theme.title} description={theme.description} />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space bg-white/45">
+    <div class="container-shell">
+      <SectionHeader
+        eyebrow="Featured Work"
+        title="Selected case studies and outputs"
+        description="These examples show how the group's research themes translate into benchmarks, public outputs, and applied collaboration."
+      />
+      <div class="grid gap-6 xl:grid-cols-[1fr_1fr]">
+        <div>
+          <h3 class="text-2xl text-ink-900">
+            Project and case-study references
+          </h3>
+          <div class="mt-6 grid gap-6">
+            {
+              featuredProjects.map((project) => (
+                <ProjectCard project={project} />
+              ))
+            }
+          </div>
+          <a
+            class="mt-6 inline-flex text-link"
+            href={getSiteHref('/projects/')}
+          >
+            Browse the projects archive
+          </a>
+        </div>
+        <div>
+          <h3 class="text-2xl text-ink-900">Relevant publications</h3>
+          <div class="mt-6 grid gap-6">
+            {
+              featuredPublications.map((publication) => (
+                <PublicationCard publication={publication} />
+              ))
+            }
+          </div>
+          <a
+            class="mt-6 inline-flex text-link"
+            href={getSiteHref('/publications/')}
+          >
+            View the full publication list
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space">
+    <div class="container-shell grid gap-6 md:grid-cols-3">
+      <Card
+        title="Projects archive"
+        description="See the broader set of applied projects, prototypes, and collaborations beyond the featured examples."
+        href={getSiteHref('/projects/')}
+        meta="Archive"
+      />
+      <Card
+        title="Teaching archive"
+        description="Browse teaching activity that connects to the group’s wider academic work."
+        href={getSiteHref('/teaching/')}
+        meta="Archive"
+      />
+      <Card
+        title="Resources archive"
+        description="Find supporting material, references, and reusable guidance for collaborators and students."
+        href={getSiteHref('/resources/')}
+        meta="Archive"
+      />
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,22 @@
+---
+import { getExternalLinkAttrs } from '@/utils/urls';
+
+interface Props {
+  href: string;
+  class?: string;
+  ariaLabel?: string;
+  title?: string;
+}
+
+const { href, class: className, ariaLabel, title } = Astro.props;
+---
+
+<a
+  href={href}
+  class={className}
+  aria-label={ariaLabel}
+  title={title}
+  {...getExternalLinkAttrs()}
+>
+  <slot />
+</a>

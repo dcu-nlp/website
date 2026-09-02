@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">NLP group icon</title>
+  <desc id="desc">Rounded square containing the letters B, D, R, and G.</desc>
+  <rect width="96" height="96" rx="24" fill="#0d1524" />
+  <path d="M25 23h18c10 0 18 6 18 16 0 7-4 12-10 14 8 2 13 8 13 16 0 12-9 19-22 19H25V23zm15 27c6 0 10-3 10-8s-4-8-10-8h-5v16h5zm2 28c7 0 11-3 11-9 0-5-4-9-11-9h-7v18h7z" fill="#ffffff"/>
+  <circle cx="72" cy="28" r="10" fill="#1c8c7d" />
+</svg>

@@ -1,0 +1,48 @@
+---
+import Card from '@/components/Card.astro';
+import Layout from '@/layouts/Layout.astro';
+import PageHero from '@/components/PageHero.astro';
+
+const resources = [
+  {
+    title: 'Group handbook',
+    description:
+      'A concise guide to onboarding, supervision expectations, writing culture, and internal workflows across the NLP Applications Group.',
+  },
+  {
+    title: 'Reading lists',
+    description:
+      'Curated entry points for natural language generation, trustworthy NLP, multilingual methods, retrieval-augmented generation, and educational AI.',
+  },
+  {
+    title: 'Evaluation templates',
+    description:
+      'Reusable checklists and experiment-planning templates for transparent reporting, language technology evaluation, and robust model comparison.',
+  },
+  {
+    title: 'Open datasets and tasks',
+    description:
+      'Task collections and benchmark curation practices supporting reproducible applied language technology and data-to-text research.',
+  },
+];
+---
+
+<Layout
+  title="Resources"
+  description="Open resources, reading lists, and lab materials."
+>
+  <PageHero
+    eyebrow="Resources"
+    title="Open materials for collaborators, students, and prospective researchers"
+    description="We share practical resources that make our research process easier to understand, reuse, and extend."
+  />
+  <section class="section-space">
+    <div class="container-shell grid gap-6 md:grid-cols-2">
+      {
+        resources.map((resource) => (
+          <Card title={resource.title} description={resource.description} />
+        ))
+      }
+    </div>
+  </section>
+</Layout>

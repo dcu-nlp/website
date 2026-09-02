@@ -1,0 +1,68 @@
+---
+const galleryItems = [
+  {
+    src: '/images/campus/woodlock-hall-library-table.jpg',
+    alt: 'Reading table inside Woodlock Hall library at Dublin City University.',
+  },
+  {
+    src: '/images/campus/dcu-campus-hallway.jpg',
+    alt: 'Glass-roof hallway on the Dublin City University campus.',
+  },
+  {
+    src: '/images/campus/dcu-glasnevin-library.jpg',
+    alt: 'Interior view of the DCU Glasnevin library with skylight ceiling.',
+  },
+] as const;
+---
+
+<section
+  class="campus-gallery"
+  data-rotating-gallery
+  aria-label="Rotating gallery of Dublin City University campus spaces"
+>
+  <div
+    class="campus-gallery__viewport"
+    data-hero-parallax
+    data-hero-parallax-active="false"
+  >
+    {
+      galleryItems.map((item, index) => (
+        <figure
+          class:list={['campus-gallery__slide', index === 0 && 'is-active']}
+          data-gallery-slide
+        >
+          <div class="campus-gallery__image-motion">
+            <img
+              src={item.src}
+              alt={item.alt}
+              class="campus-gallery__image"
+              loading={index === 0 ? 'eager' : 'lazy'}
+              decoding="async"
+            />
+          </div>
+        </figure>
+      ))
+    }
+
+    <div class="campus-gallery__overlay">
+      <slot />
+    </div>
+  </div>
+
+  <div class="campus-gallery__controls sr-only" aria-label="Gallery controls">
+    {
+      galleryItems.map((_, index) => (
+        <button
+          type="button"
+          class:list={['campus-gallery__dot', index === 0 && 'is-active']}
+          data-gallery-dot
+          data-gallery-index={index}
+          aria-label={`Show image ${index + 1}`}
+          aria-pressed={index === 0 ? 'true' : 'false'}
+        >
+          <span>{String(index + 1).padStart(2, '0')}</span>
+        </button>
+      ))
+    }
+  </div>
+</section>

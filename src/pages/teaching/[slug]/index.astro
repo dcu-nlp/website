@@ -1,0 +1,49 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import { getEntrySlug } from '@/utils/content';
+
+export async function getStaticPaths() {
+  const teaching = await getCollection('teaching');
+  return teaching.map((course) => ({
+    params: { slug: getEntrySlug(course) },
+    props: { course },
+  }));
+}
+
+const { course } = Astro.props;
+const { Content } = await render(course);
+---
+
+<Layout title={course.data.title} description={course.data.summary}>
+  <section class="section-space">
+    <div class="container-shell">
+      <div class="surface px-5 py-8 sm:px-8 sm:py-10 lg:px-12">
+        <p class="eyebrow">{course.data.term}</p>
+        <h1 class="detail-page-title mt-4 max-w-4xl text-ink-900">
+          {course.data.title}
+        </h1>
+        <p class="mt-4 text-base text-accent-600 sm:text-lg">
+          {course.data.role}
+        </p>
+        <p
+          class="mt-4 max-w-3xl text-base leading-7 text-ink-600 sm:text-lg sm:leading-8"
+        >
+          {course.data.summary}
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          {
+            course.data.links.map((link: { label: string; href: string }) => (
+              <a class="text-sm font-semibold text-accent-600" href={link.href}>
+                {link.label}
+              </a>
+            ))
+          }
+        </div>
+        <article class="prose-panel mt-10">
+          <Content />
+        </article>
+      </div>
+    </div>
+  </section>
+</Layout>

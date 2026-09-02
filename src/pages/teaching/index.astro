@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import PageHero from '@/components/PageHero.astro';
+import TeachingCard from '@/components/TeachingCard.astro';
+
+const teaching = await getCollection('teaching');
+---
+
+<Layout
+  title="Teaching"
+  description="Teaching, seminars, and supervision connected to the group’s research."
+>
+  <PageHero
+    eyebrow="Teaching"
+    title="Teaching that reflects current research practice"
+    description="Courses and seminars are designed to help students build strong conceptual foundations while engaging with the realities of modern language technology."
+  />
+  <section class="section-space">
+    <div class="container-shell grid gap-6 lg:grid-cols-2">
+      {teaching.map((course) => <TeachingCard course={course} />)}
+    </div>
+  </section>
+</Layout>

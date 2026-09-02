@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f4f6fb" />
+      <stop offset="100%" stop-color="#e5f3f0" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect x="72" y="72" width="1056" height="486" rx="40" fill="#ffffff" stroke="#d7e1ef" />
+  <text x="120" y="240" fill="#0d1524" font-family="Georgia, serif" font-size="76">NLP group</text>
+  <text x="120" y="320" fill="#44526c" font-family="Arial, sans-serif" font-size="34">Natural language processing, trustworthy AI, and language technologies.</text>
+  <circle cx="1000" cy="170" r="48" fill="#1c8c7d" opacity="0.9" />
+  <circle cx="1060" cy="260" r="24" fill="#0d1524" opacity="0.12" />
+  <circle cx="950" cy="270" r="20" fill="#1c8c7d" opacity="0.28" />
+</svg>

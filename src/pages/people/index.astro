@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import PageHero from '@/components/PageHero.astro';
+import PersonCard from '@/components/PersonCard.astro';
+import Layout from '@/layouts/Layout.astro';
+
+const people = (await getCollection('people')).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+---
+
+<Layout
+  title="People"
+  description="Meet Dr Brian Davis, Sri Balaaji Natarajan Kalaivendan, and the DCU researchers contributing to the NLP Applications Group."
+>
+  <PageHero
+    eyebrow="People"
+    title="The people behind the NLP Applications Group's research and delivery"
+    description="The team includes faculty, research fellows, doctoral researchers, and research engineering support working across natural language generation, practical NLP, and online safety."
+  />
+
+  <section class="section-space">
+    <div class="container-shell grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      {people.map((person) => <PersonCard person={person} />)}
+    </div>
+  </section>
+</Layout>

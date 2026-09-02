@@ -1,0 +1,83 @@
+---
+import ExternalLink from '@/components/ExternalLink.astro';
+import { siteConfig } from '@/utils/site';
+import { getMailtoHref, getSiteHref } from '@/utils/urls';
+---
+
+<footer class="border-t border-ink-100 bg-white/80 backdrop-blur">
+  <div
+    class="container-shell grid gap-10 py-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr]"
+  >
+    <div class="space-y-4">
+      <p class="eyebrow">Research-led language technology</p>
+      <span
+        role="img"
+        aria-label={siteConfig.title}
+        class="brand-logo h-16 w-[13rem] max-w-full sm:h-20 sm:w-[18rem] lg:h-24 lg:w-[22rem]"
+      ></span>
+      <p class="max-w-xl text-sm leading-7 text-ink-600">
+        {siteConfig.description}
+      </p>
+      <p class="text-sm text-ink-500">
+        {siteConfig.contact.institution}<br />
+        {siteConfig.contact.location}
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-ink-500">
+        Sections
+      </h3>
+      <ul class="mt-4 space-y-3 text-sm text-ink-600">
+        {
+          siteConfig.nav.map((item) => (
+            <li>
+              <a class="hover:text-accent-600" href={getSiteHref(item.href)}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-ink-500">
+        Archives
+      </h3>
+      <ul class="mt-4 space-y-3 text-sm text-ink-600">
+        {
+          siteConfig.footerLinks.map((item) => (
+            <li>
+              <a class="hover:text-accent-600" href={getSiteHref(item.href)}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <h3
+        class="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-ink-500"
+      >
+        Connect
+      </h3>
+      <ul class="mt-4 space-y-3 text-sm text-ink-600">
+        {
+          siteConfig.social.map((item) => (
+            <li>
+              <ExternalLink class="hover:text-accent-600" href={item.href}>
+                {item.label}
+              </ExternalLink>
+            </li>
+          ))
+        }
+      </ul>
+      <a
+        class="mt-6 inline-block text-sm font-semibold text-accent-600"
+        href={getMailtoHref(siteConfig.contact.email)}
+      >
+        {siteConfig.contact.email}
+      </a>
+    </div>
+  </div>
+</footer>

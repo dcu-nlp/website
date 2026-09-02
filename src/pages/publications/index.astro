@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import PageHero from '@/components/PageHero.astro';
+import PublicationCard from '@/components/PublicationCard.astro';
+import { mergePublications } from '@/utils/publications';
+
+const publications = mergePublications(await getCollection('publications'));
+---
+
+<Layout
+  title="Publications"
+  description="Journal articles, conference papers, and workshop publications from the group."
+>
+  <PageHero
+    eyebrow="Publications"
+    title="Publications across online safety, NLP, and multilingual language technology"
+    description="This page brings together the group's conference papers, workshop publications, and other public research outputs."
+  />
+  <section class="section-space">
+    <div class="container-shell grid gap-6 lg:grid-cols-2">
+      {
+        publications.map((publication) => (
+          <PublicationCard publication={publication} />
+        ))
+      }
+    </div>
+  </section>
+</Layout>

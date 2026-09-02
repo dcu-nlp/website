@@ -1,0 +1,101 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import { getEntrySlug } from '@/utils/content';
+import {
+  mergePublications,
+  sanitizePublicationDisplayText,
+} from '@/utils/publications';
+
+export async function getStaticPaths() {
+  const publications = await getCollection('publications');
+  const mergedPublications = mergePublications(publications);
+
+  return mergedPublications.map((publication) => ({
+    params: { slug: publication.slug },
+    props: {
+      publication,
+      contentSlug:
+        publication.detailSource === 'content' ? publication.slug : undefined,
+    },
+  }));
+}
+
+const { publication, contentSlug } = Astro.props;
+const publications = await getCollection('publications');
+const contentEntry = contentSlug
+  ? publications.find((entry) => getEntrySlug(entry) === contentSlug)
+  : undefined;
+const rendered = contentEntry ? await render(contentEntry) : undefined;
+const Content = rendered?.Content;
+const displayTitle = sanitizePublicationDisplayText(publication.title);
+const displayAbstract = sanitizePublicationDisplayText(publication.abstract);
+---
+
+<Layout title={displayTitle} description={displayAbstract}>
+  <section class="section-space">
+    <div class="container-shell">
+      <div class="surface px-5 py-8 sm:px-8 sm:py-10 lg:px-12">
+        <p class="eyebrow">{publication.venue}</p>
+        <h1 class="detail-page-title mt-4 max-w-5xl text-ink-900">
+          {displayTitle}
+        </h1>
+        <p
+          class="mt-5 max-w-4xl text-base leading-7 text-ink-600 sm:mt-6 sm:text-lg sm:leading-8"
+        >
+          {publication.authors.join(', ')}
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <span class="rounded-full bg-ink-100 px-4 py-2 text-sm text-ink-600"
+            >{publication.year}</span
+          >
+          {
+            publication.award && (
+              <span class="rounded-full bg-accent-400/10 px-4 py-2 text-sm text-accent-600">
+                {publication.award}
+              </span>
+            )
+          }
+          {
+            publication.tags.map((tag: string) => (
+              <span class="rounded-full bg-ink-100 px-4 py-2 text-sm text-ink-600">
+                {tag}
+              </span>
+            ))
+          }
+        </div>
+        <div class="mt-8 flex flex-wrap gap-4 text-sm font-semibold">
+          {
+            publication.paperUrl && (
+              <a class="text-accent-600" href={publication.paperUrl}>
+                Paper
+              </a>
+            )
+          }
+          {
+            publication.codeUrl && (
+              <a class="text-accent-600" href={publication.codeUrl}>
+                Code
+              </a>
+            )
+          }
+        </div>
+        {
+          Content ? (
+            <article class="prose-panel mt-10">
+              <Content />
+            </article>
+          ) : (
+            <article class="prose-panel mt-10">
+              <p>{displayAbstract}</p>
+              <p>
+                This entry is currently sourced from the generated publications
+                dataset used by the automated sync workflow.
+              </p>
+            </article>
+          )
+        }
+      </div>
+    </div>
+  </section>
+</Layout>

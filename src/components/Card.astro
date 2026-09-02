@@ -1,0 +1,33 @@
+---
+interface Props {
+  href?: string;
+  title: string;
+  description: string;
+  meta?: string;
+}
+
+const { href, title, description, meta } = Astro.props;
+const Tag = href ? 'a' : 'article';
+---
+
+<Tag
+  href={href}
+  class="card-surface group block h-full p-6 transition duration-300 hover:-translate-y-1 hover:border-accent-400 hover:shadow-[0_18px_50px_rgba(23,82,209,0.12)]"
+>
+  {
+    meta && (
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-400">
+        {meta}
+      </p>
+    )
+  }
+  <h3 class="mt-4 text-2xl text-ink-900">{title}</h3>
+  <p class="mt-4 text-sm leading-7 text-ink-600">{description}</p>
+  {
+    href && (
+      <span class="mt-6 inline-flex text-sm font-semibold text-accent-600">
+        Explore
+      </span>
+    )
+  }
+</Tag>

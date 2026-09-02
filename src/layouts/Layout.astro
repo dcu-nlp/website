@@ -1,0 +1,286 @@
+---
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import Seo from '@/components/Seo.astro';
+import '@/styles/global.css';
+import { getAssetHref } from '@/utils/urls';
+
+interface Props {
+  title?: string;
+  description?: string;
+  pathname?: string;
+}
+
+const { title, description, pathname = Astro.url.pathname } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#003135" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href={getAssetHref('/favicon.svg')} />
+    <link rel="manifest" href={getAssetHref('/manifest.webmanifest')} />
+    <Seo title={title} description={description} pathname={pathname} />
+  </head>
+  <body>
+    <a
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-ink-900 focus:px-4 focus:py-2 focus:text-white"
+      href="#content"
+    >
+      Skip to content
+    </a>
+    <Header />
+    <main id="content">
+      <slot />
+    </main>
+    <Footer />
+    <script is:inline>
+      if (!window.__flipTileBound) {
+        const toggleTile = (button) => {
+          const targetId = button.getAttribute('data-flip-target');
+          if (!targetId) return;
+          const tile = document.getElementById(targetId);
+          if (!tile) return;
+          const isFlipped = tile.classList.toggle('is-flipped');
+          const triggerLabel = isFlipped
+            ? 'Show front of card'
+            : 'Show back of card';
+          tile.querySelectorAll('[data-flip-trigger]').forEach((node) => {
+            node.setAttribute('aria-pressed', String(isFlipped));
+            node.setAttribute('aria-label', triggerLabel);
+          });
+        };
+
+        document.addEventListener('click', (event) => {
+          const trigger =
+            event.target instanceof Element
+              ? event.target.closest('[data-flip-trigger]')
+              : null;
+          if (!(trigger instanceof HTMLButtonElement)) return;
+          toggleTile(trigger);
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key !== 'Enter' && event.key !== ' ') return;
+          const trigger =
+            event.target instanceof Element
+              ? event.target.closest('[data-flip-trigger]')
+              : null;
+          if (!(trigger instanceof HTMLButtonElement)) return;
+          event.preventDefault();
+          toggleTile(trigger);
+        });
+
+        window.__flipTileBound = true;
+      }
+
+      if (!window.__rotatingGalleryBound) {
+        const parseDuration = (value, fallback) => {
+          const normalized = value.trim();
+          if (!normalized) return fallback;
+          if (normalized.endsWith('ms')) {
+            const duration = Number.parseFloat(normalized.slice(0, -2));
+            return Number.isFinite(duration) ? duration : fallback;
+          }
+
+          if (normalized.endsWith('s')) {
+            const duration = Number.parseFloat(normalized.slice(0, -1));
+            return Number.isFinite(duration) ? duration * 1000 : fallback;
+          }
+
+          const duration = Number.parseFloat(normalized);
+          return Number.isFinite(duration) ? duration : fallback;
+        };
+
+        document
+          .querySelectorAll('[data-rotating-gallery]')
+          .forEach((gallery) => {
+            const slides = Array.from(
+              gallery.querySelectorAll('[data-gallery-slide]'),
+            );
+            const dots = Array.from(
+              gallery.querySelectorAll('[data-gallery-dot]'),
+            );
+            if (slides.length < 2) return;
+
+            const galleryStyles = window.getComputedStyle(gallery);
+            const rotationDelay = parseDuration(
+              galleryStyles.getPropertyValue('--gallery-rotation-duration'),
+              9600,
+            );
+            const fadeDuration = parseDuration(
+              galleryStyles.getPropertyValue('--gallery-fade-duration'),
+              2200,
+            );
+
+            let index = slides.findIndex((slide) =>
+              slide.classList.contains('is-active'),
+            );
+            if (index < 0) index = 0;
+            let timer;
+            const leaveTimers = new WeakMap();
+
+            const showSlide = (nextIndex) => {
+              if (nextIndex === index) return;
+
+              const currentSlide = slides[index];
+
+              if (currentSlide) {
+                currentSlide.classList.remove('is-active');
+                currentSlide.classList.add('is-leaving');
+
+                const existingTimer = leaveTimers.get(currentSlide);
+                if (existingTimer) window.clearTimeout(existingTimer);
+
+                const leaveTimer = window.setTimeout(() => {
+                  currentSlide.classList.remove('is-leaving');
+                  leaveTimers.delete(currentSlide);
+                }, fadeDuration);
+
+                leaveTimers.set(currentSlide, leaveTimer);
+              }
+
+              slides.forEach((slide, slideIndex) => {
+                if (slideIndex === nextIndex) {
+                  slide.classList.remove('is-leaving');
+                  slide.classList.add('is-active');
+                } else if (slide !== currentSlide) {
+                  slide.classList.remove('is-active', 'is-leaving');
+                }
+              });
+
+              dots.forEach((dot, dotIndex) => {
+                const isActive = dotIndex === nextIndex;
+                dot.classList.toggle('is-active', isActive);
+                dot.setAttribute('aria-pressed', String(isActive));
+              });
+
+              index = nextIndex;
+            };
+
+            const startRotation = () => {
+              clearInterval(timer);
+              timer = window.setInterval(() => {
+                showSlide((index + 1) % slides.length);
+              }, rotationDelay);
+            };
+
+            if (dots.length === slides.length) {
+              dots.forEach((dot, dotIndex) => {
+                dot.addEventListener('click', () => {
+                  showSlide(dotIndex);
+                  startRotation();
+                });
+              });
+            }
+
+            startRotation();
+          });
+
+        window.__rotatingGalleryBound = true;
+      }
+
+      if (!window.__heroParallaxBound) {
+        const supportsFinePointer = window.matchMedia(
+          '(hover: hover) and (pointer: fine)',
+        ).matches;
+        const prefersReducedMotion = window.matchMedia(
+          '(prefers-reduced-motion: reduce)',
+        ).matches;
+
+        const resetParallax = (surface) => {
+          surface.style.setProperty('--hero-offset-x', '0');
+          surface.style.setProperty('--hero-offset-y', '0');
+          surface.style.setProperty('--hero-glow-x', '50%');
+          surface.style.setProperty('--hero-glow-y', '50%');
+          surface.setAttribute('data-hero-parallax-active', 'false');
+        };
+
+        if (supportsFinePointer && !prefersReducedMotion) {
+          document
+            .querySelectorAll('[data-hero-parallax]')
+            .forEach((surface) => {
+              if (!(surface instanceof HTMLElement)) return;
+
+              let frameId = 0;
+              let nextOffsetX = 0;
+              let nextOffsetY = 0;
+
+              const commitFrame = () => {
+                frameId = 0;
+                surface.style.setProperty(
+                  '--hero-offset-x',
+                  nextOffsetX.toFixed(4),
+                );
+                surface.style.setProperty(
+                  '--hero-offset-y',
+                  nextOffsetY.toFixed(4),
+                );
+                surface.style.setProperty(
+                  '--hero-glow-x',
+                  `${(50 + nextOffsetX * 3.2).toFixed(2)}%`,
+                );
+                surface.style.setProperty(
+                  '--hero-glow-y',
+                  `${(50 + nextOffsetY * 2.8).toFixed(2)}%`,
+                );
+                surface.setAttribute('data-hero-parallax-active', 'true');
+              };
+
+              const queueFrame = () => {
+                if (frameId) return;
+                frameId = window.requestAnimationFrame(commitFrame);
+              };
+
+              const handlePointerMove = (event) => {
+                const rect = surface.getBoundingClientRect();
+                if (!rect.width || !rect.height) return;
+
+                const pointerX = (event.clientX - rect.left) / rect.width;
+                const pointerY = (event.clientY - rect.top) / rect.height;
+                nextOffsetX = Math.max(-1, Math.min(1, pointerX * 2 - 1)) * 0.5;
+                nextOffsetY =
+                  Math.max(-1, Math.min(1, pointerY * 2 - 1)) * 0.42;
+                queueFrame();
+              };
+
+              const handlePointerLeave = () => {
+                if (frameId) {
+                  window.cancelAnimationFrame(frameId);
+                  frameId = 0;
+                }
+
+                nextOffsetX = 0;
+                nextOffsetY = 0;
+                resetParallax(surface);
+              };
+
+              surface.addEventListener('pointerenter', handlePointerMove);
+              surface.addEventListener('pointermove', handlePointerMove);
+              surface.addEventListener('pointerleave', handlePointerLeave);
+              surface.addEventListener('pointercancel', handlePointerLeave);
+              resetParallax(surface);
+            });
+        } else {
+          document
+            .querySelectorAll('[data-hero-parallax]')
+            .forEach((surface) => {
+              if (!(surface instanceof HTMLElement)) return;
+              resetParallax(surface);
+            });
+        }
+
+        window.__heroParallaxBound = true;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+---
+import { siteConfig } from '@/utils/site';
+import { getCanonical, getPageTitle } from '@/utils/seo';
+import { getAssetHref } from '@/utils/urls';
+
+interface Props {
+  title?: string;
+  description?: string;
+  pathname?: string;
+  image?: string;
+}
+
+const {
+  title,
+  description = siteConfig.description,
+  pathname = '/',
+  image = siteConfig.ogImage,
+} = Astro.props;
+
+const site = Astro.site?.toString() ?? siteConfig.url;
+const canonical = getCanonical(pathname, site);
+const pageTitle = getPageTitle(title);
+const imageUrl = new URL(getAssetHref(image), site).toString();
+---
+
+<title>{pageTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={imageUrl} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageUrl} />

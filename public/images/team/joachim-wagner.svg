@@ -1,0 +1,13 @@
+<svg width="640" height="760" viewBox="0 0 640 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="640" height="760" rx="40" fill="url(#paint0_linear_331_3)"/>
+<circle cx="320" cy="238" r="108" fill="#F8FBFD"/>
+<rect x="150" y="378" width="340" height="236" rx="128" fill="#1C8C7D" fill-opacity="0.74"/>
+<text x="320" y="674" text-anchor="middle" fill="#0D1524" font-family="Arial, sans-serif" font-size="34" font-weight="700">Joachim Wagner</text>
+<text x="320" y="712" text-anchor="middle" fill="#66758F" font-family="Arial, sans-serif" font-size="18" font-weight="600">Placeholder headshot</text>
+<defs>
+<linearGradient id="paint0_linear_331_3" x1="62" y1="54" x2="560" y2="696" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EEF5F4"/>
+<stop offset="1" stop-color="#DCE6F0"/>
+</linearGradient>
+</defs>
+</svg>

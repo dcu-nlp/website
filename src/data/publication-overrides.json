@@ -1,0 +1,12 @@
+{
+  "featuredSlugs": [
+    "bullybench",
+    "synthetic-vs-gold-cyberbullying-detection",
+    "pipeline-neural-data-to-text-with-large-language-models",
+    "dcu-adapt-modpb-at-the-gem-24-data-to-text-generation-task",
+    "beyond-binary-cyberbullying-detection-and-intervention"
+  ],
+  "excludedSourceIds": [],
+  "manualCorrections": {},
+  "manualEntries": []
+}

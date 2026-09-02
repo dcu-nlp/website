@@ -1,0 +1,41 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import { getEntrySlug } from '@/utils/content';
+
+export async function getStaticPaths() {
+  const news = await getCollection('news');
+  return news.map((item) => ({
+    params: { slug: getEntrySlug(item) },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const { Content } = await render(item);
+---
+
+<Layout title={item.data.title} description={item.data.summary}>
+  <section class="section-space">
+    <div class="container-shell">
+      <div class="surface px-5 py-8 sm:px-8 sm:py-10 lg:px-12">
+        <p class="eyebrow">{item.data.category}</p>
+        <h1 class="detail-page-title mt-4 max-w-4xl text-ink-900">
+          {item.data.title}
+        </h1>
+        <p class="mt-4 text-sm text-ink-500">
+          {
+            item.data.date.toLocaleDateString('en-IE', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })
+          }
+        </p>
+        <article class="prose-panel mt-10">
+          <Content />
+        </article>
+      </div>
+    </div>
+  </section>
+</Layout>

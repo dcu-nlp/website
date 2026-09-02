@@ -1,0 +1,141 @@
+---
+import ExternalLink from '@/components/ExternalLink.astro';
+import { getCollection, render } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import { getEntrySlug } from '@/utils/content';
+import { getMailtoHref } from '@/utils/urls';
+
+export async function getStaticPaths() {
+  const people = await getCollection('people');
+  return people.map((person) => ({
+    params: { slug: getEntrySlug(person) },
+    props: { person },
+  }));
+}
+
+const { person } = Astro.props;
+const { Content } = await render(person);
+---
+
+<Layout title={person.data.name} description={person.data.bio}>
+  <section class="section-space">
+    <div class="container-shell">
+      <div
+        class="surface grid gap-8 px-5 py-8 sm:gap-10 sm:px-8 sm:py-10 lg:grid-cols-[0.8fr_1.2fr] lg:px-12"
+      >
+        <div class="space-y-6">
+          {
+            person.data.photo ? (
+              <img
+                src={person.data.photo}
+                alt={`Portrait placeholder for ${person.data.name}`}
+                class="h-64 w-full rounded-[1.75rem] object-cover sm:h-72"
+              />
+            ) : (
+              <div class="flex h-20 w-20 items-center justify-center rounded-[1.75rem] bg-ink-900 text-2xl font-semibold text-white">
+                {person.data.name
+                  .split(' ')
+                  .map((part: string) => part[0])
+                  .slice(0, 2)
+                  .join('')}
+              </div>
+            )
+          }
+          <div>
+            <p class="eyebrow">{person.data.status}</p>
+            <h1 class="detail-page-title mt-4 text-ink-900">
+              {person.data.name}
+            </h1>
+            <p class="mt-4 text-base text-accent-600 sm:text-lg">
+              {person.data.role}
+            </p>
+            <p class="mt-2 text-sm text-ink-500">{person.data.affiliation}</p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            {
+              person.data.researchAreas.map((area: string) => (
+                <span class="rounded-full bg-ink-100 px-3 py-1 text-xs font-medium text-ink-600">
+                  {area}
+                </span>
+              ))
+            }
+          </div>
+          <div class="space-y-3 text-sm text-ink-600">
+            {
+              person.data.email && (
+                <p>
+                  <a class="text-link" href={getMailtoHref(person.data.email)}>
+                    {person.data.email}
+                  </a>
+                </p>
+              )
+            }
+            {
+              person.data.website && (
+                <p>
+                  <ExternalLink class="text-link" href={person.data.website}>
+                    Personal website
+                  </ExternalLink>
+                </p>
+              )
+            }
+            {
+              person.data.scholar && (
+                <p>
+                  <ExternalLink class="text-link" href={person.data.scholar}>
+                    Google Scholar
+                  </ExternalLink>
+                </p>
+              )
+            }
+            {
+              person.data.dblpId && (
+                <p>
+                  <ExternalLink
+                    class="text-link"
+                    href={`https://dblp.org/pid/${person.data.dblpId}.html`}
+                  >
+                    DBLP profile
+                  </ExternalLink>
+                </p>
+              )
+            }
+            {
+              person.data.orcidId && (
+                <p>
+                  <ExternalLink
+                    class="text-link"
+                    href={`https://orcid.org/${person.data.orcidId}`}
+                  >
+                    ORCID profile
+                  </ExternalLink>
+                </p>
+              )
+            }
+            {
+              person.data.github && (
+                <p>
+                  <ExternalLink class="text-link" href={person.data.github}>
+                    GitHub
+                  </ExternalLink>
+                </p>
+              )
+            }
+            {
+              person.data.linkedin && (
+                <p>
+                  <ExternalLink class="text-link" href={person.data.linkedin}>
+                    LinkedIn
+                  </ExternalLink>
+                </p>
+              )
+            }
+          </div>
+        </div>
+        <article class="prose-panel">
+          <Content />
+        </article>
+      </div>
+    </div>
+  </section>
+</Layout>

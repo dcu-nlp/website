@@ -1,0 +1,29 @@
+---
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout
+  title="Page Not Found"
+  description="The page you requested could not be found."
+>
+  <section class="section-space">
+    <div class="container-shell">
+      <div class="surface px-8 py-14 text-center">
+        <p class="eyebrow">404</p>
+        <h1 class="mt-4 text-5xl text-ink-900">
+          This page has moved or does not exist
+        </h1>
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-ink-600">
+          Try the homepage or navigate through the main sections to find
+          research, people, publications, and project information.
+        </p>
+        <a
+          class="mt-8 inline-flex rounded-full bg-ink-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-accent-600"
+          href={import.meta.env.BASE_URL}
+        >
+          Return home
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

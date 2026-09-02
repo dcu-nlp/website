@@ -1,0 +1,53 @@
+---
+import CTASection from '@/components/CTASection.astro';
+import Card from '@/components/Card.astro';
+import Layout from '@/layouts/Layout.astro';
+import PageHero from '@/components/PageHero.astro';
+
+const opportunities = [
+  {
+    title: 'Doctoral study',
+    description:
+      'We welcome applicants with strengths in NLP, machine learning, linguistics, HCI, or adjacent computational disciplines, especially where applied language technology is central.',
+  },
+  {
+    title: 'Research collaboration',
+    description:
+      'The group is open to partnerships with universities, public-sector organisations, and industry teams pursuing language technology with clear societal value.',
+  },
+  {
+    title: 'Student projects',
+    description:
+      'Master’s and undergraduate students can contribute to well-scoped projects that balance research ambition, practical delivery, and solid mentorship.',
+  },
+];
+---
+
+<Layout
+  title="Join"
+  description="Opportunities to study, collaborate, or partner with the NLP Applications Group."
+>
+  <PageHero
+    eyebrow="Join"
+    title="Join the group or start a conversation"
+    description="We are especially interested in people who care about technical depth, thoughtful evaluation, clear writing, and collaborative research culture around practical NLP."
+  />
+  <section class="section-space">
+    <div class="container-shell grid gap-6 lg:grid-cols-3">
+      {
+        opportunities.map((opportunity) => (
+          <Card
+            title={opportunity.title}
+            description={opportunity.description}
+          />
+        ))
+      }
+    </div>
+  </section>
+  <CTASection
+    title="Prospective students and collaborators are encouraged to reach out with a focused note"
+    description="Share your background, relevant work, and the research questions or partnership ideas you want to pursue. Thoughtful, specific emails are the most helpful starting point."
+    primaryLabel="Contact the team"
+    primaryHref={`${import.meta.env.BASE_URL}contact/`}
+  />
+</Layout>
