@@ -1,6 +1,7 @@
 ---
 import ExternalLink from '@/components/ExternalLink.astro';
 import { siteConfig } from '@/utils/site';
+import { getAssetHref } from '@/utils/urls';
 ---
 
 <section class="section-space pt-0">
@@ -35,7 +36,7 @@ import { siteConfig } from '@/utils/site';
             >
               <span class="sr-only">{partner.label}</span>
               <img
-                src={partner.image}
+                src={getAssetHref(partner.image)}
                 alt={partner.imageAlt}
                 class:list={[
                   'logo-mark h-auto w-auto max-w-[11.5rem] object-contain sm:max-w-[15rem]',

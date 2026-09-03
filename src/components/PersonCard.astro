@@ -2,7 +2,7 @@
 import ExternalLink from '@/components/ExternalLink.astro';
 import type { CollectionEntry } from 'astro:content';
 import { getEntrySlug } from '@/utils/content';
-import { getMailtoHref, getSiteHref } from '@/utils/urls';
+import { getAssetHref, getMailtoHref, getSiteHref } from '@/utils/urls';
 
 interface Props {
   person: CollectionEntry<'people'>;
@@ -39,7 +39,7 @@ const tileId = `person-tile-${slug}`;
       {
         data.photo ? (
           <img
-            src={data.photo}
+            src={getAssetHref(data.photo)}
             alt={`Portrait placeholder for ${data.name}`}
             class="mt-5 h-56 w-full rounded-[1.5rem] object-cover"
           />

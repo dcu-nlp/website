@@ -17,7 +17,11 @@ export function getSiteHref(pathname = '/') {
 }
 
 export function getAssetHref(assetPath: string) {
-  return `${import.meta.env.BASE_URL}${assetPath.replace(/^\//, '')}`;
+  const base = import.meta.env.BASE_URL.endsWith('/')
+    ? import.meta.env.BASE_URL
+    : `${import.meta.env.BASE_URL}/`;
+
+  return `${base}${assetPath.replace(/^\//, '')}`;
 }
 
 export function getMailtoHref(email: string) {

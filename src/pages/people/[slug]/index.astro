@@ -3,7 +3,7 @@ import ExternalLink from '@/components/ExternalLink.astro';
 import { getCollection, render } from 'astro:content';
 import Layout from '@/layouts/Layout.astro';
 import { getEntrySlug } from '@/utils/content';
-import { getMailtoHref } from '@/utils/urls';
+import { getAssetHref, getMailtoHref } from '@/utils/urls';
 
 export async function getStaticPaths() {
   const people = await getCollection('people');
@@ -27,7 +27,7 @@ const { Content } = await render(person);
           {
             person.data.photo ? (
               <img
-                src={person.data.photo}
+                src={getAssetHref(person.data.photo)}
                 alt={`Portrait placeholder for ${person.data.name}`}
                 class="h-64 w-full rounded-[1.75rem] object-cover sm:h-72"
               />

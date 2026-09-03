@@ -1,4 +1,6 @@
 ---
+import { getAssetHref } from '@/utils/urls';
+
 const galleryItems = [
   {
     src: '/images/campus/woodlock-hall-library-table.jpg',
@@ -33,7 +35,7 @@ const galleryItems = [
         >
           <div class="campus-gallery__image-motion">
             <img
-              src={item.src}
+              src={getAssetHref(item.src)}
               alt={item.alt}
               class="campus-gallery__image"
               loading={index === 0 ? 'eager' : 'lazy'}
