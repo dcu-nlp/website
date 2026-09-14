@@ -746,16 +746,17 @@
   }
 
   .campus-gallery__viewport {
-    min-height: 31rem;
+    min-height: 40rem;
+    border-radius: 1.5rem;
   }
 
   .campus-gallery__image {
-    height: 31rem;
+    height: 40rem;
   }
 
   .campus-gallery__overlay {
-    align-items: flex-end;
-    padding: 1.25rem;
+    align-items: center;
+    padding: 1.1rem;
     background:
       linear-gradient(
         180deg,
@@ -773,7 +774,7 @@
 
   .hero-overlay-copy {
     max-width: 100%;
-    row-gap: 1.1rem;
+    row-gap: 0.85rem;
   }
 
   .hero-overlay-heading {
@@ -781,8 +782,8 @@
   }
 
   .hero-overlay-title {
-    font-size: clamp(2.45rem, 9.2vw, 3.5rem);
-    line-height: 0.96;
+    font-size: clamp(2rem, 9.2vw, 2.8rem);
+    line-height: 1;
     max-width: 100%;
   }
 
@@ -792,29 +793,45 @@
 
   .hero-overlay-description {
     max-width: 100%;
-    font-size: 0.95rem;
-    line-height: 1.54;
+    font-size: 0.9rem;
+    line-height: 1.48;
   }
 
   .hero-overlay-actions {
-    margin-top: 0.15rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem;
+    margin-top: 0.1rem;
+  }
+
+  .hero-overlay-actions a {
+    min-width: 0;
+    padding-inline: 0.75rem;
+    text-align: center;
   }
 
   .hero-metric-grid {
-    gap: 0.75rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+    margin-top: 0.4rem;
   }
 
   .hero-metric {
-    padding: 0.85rem 0.95rem;
+    min-width: 0;
+    padding: 0.75rem 0.65rem;
+    border-radius: 1rem;
   }
 
   .hero-metric__value {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   .hero-metric__label {
-    margin-top: 0.35rem;
-    letter-spacing: 0.18em;
+    margin-top: 0.25rem;
+    font-size: 0.58rem;
+    line-height: 1.35;
+    letter-spacing: 0.1em;
+    overflow-wrap: anywhere;
   }
 
   .campus-gallery__controls {
@@ -827,6 +844,18 @@
   .showcase-panel,
   .section-surface {
     border-radius: 1.5rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-overlay-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .campus-gallery__viewport,
+  .campus-gallery__image {
+    min-height: 43rem;
+    height: 43rem;
   }
 }
 
