@@ -27,9 +27,11 @@ const { Content } = await render(person);
           {
             person.data.photo ? (
               <img
+                loading="lazy"
+                decoding="async"
                 src={getAssetHref(person.data.photo)}
-                alt={`Portrait placeholder for ${person.data.name}`}
-                class="h-64 w-full rounded-[1.75rem] object-cover sm:h-72"
+                alt={`Portrait of ${person.data.name}`}
+                class="h-64 w-full rounded-[1.75rem] object-cover object-top sm:h-72"
               />
             ) : (
               <div class="flex h-20 w-20 items-center justify-center rounded-[1.75rem] bg-ink-900 text-2xl font-semibold text-white">

@@ -33,6 +33,9 @@ jobs:
       - name: Sync publication data
         run: npm run sync:publications
 
+      - name: Validate publication data and site
+        run: npm test && npm run build
+
       - name: Commit publication updates
         run: |
           git config user.name "github-actions[bot]"

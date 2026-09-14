@@ -98,7 +98,11 @@ The site is configured for static deployment through `.github/workflows/deploy.y
 The publications archive now supports a generated data layer that can be refreshed by GitHub Actions.
 
 - `npm run sync:publications` fetches publication data for the authors defined in `src/data/people/`.
-- The sync uses per-person metadata such as `dblpId`, `orcidId`, `publicationNameVariants`, and `publicationsEnabled`.
+- The sync fetches each enabled person’s exact DBLP XML bibliography using a verified `dblpId`. Every imported record must contain that same author/editor PID. Name searches and automatic ORCID discovery are disabled.
+- Verify new IDs against the researcher’s actual bibliography, never a DBLP disambiguation page.
+- If any configured bibliography fails, is blocked, or contains no verified records, the sync fails before replacing the existing dataset. Review the workflow failure and retry after source access recovers.
+- The September 2026 cleanup retained 46 of 100 cached imports using exact DBLP researcher labels and removed all unverified ORCID records. `generatedAt` retains the original fetch date; `reviewedAt` records the cleanup date.
+- Run `npm test` to check identity matching, metadata decoding, deduplication, route collisions, and combined search filters. The deployment and sync workflows run these tests.
 - Generated outputs are written to:
   - `src/data/generated/publications.json`
   - `src/data/generated/author-identities.json`
@@ -124,3 +128,13 @@ The scheduled workflow lives in `.github/workflows/sync-publications.yml` and ru
 - Homepage sections pull featured content from collection entries using the `featured` field.
 - The design system is intentionally restrained: one accent color, strong typography contrast, and reusable card surfaces.
 - The site is fully static and uses minimal client-side JavaScript.
+
+## Archive and homepage updates
+
+- Publications support title/author/venue/topic search, year/author/topic filters, list and grid layouts, and shareable query URLs. Without JavaScript the full archive remains readable.
+- Paper links, author lists, and expandable plain-text citations stay available without flip-card interactions. Official titles are preserved. Curated entries take precedence over generated records matched by DOI, source ID, or normalized title and year.
+- The homepage shows the three newest non-future news entries from `src/data/news/`. Keep their dates and linked sources accurate.
+- Four existing JPEG portraits are used with corrected alt text, lazy loading, and consistent positioning. Sri Balaaji currently uses an initials fallback; add a genuine portrait under `public/images/team/` and set `photo` in his profile when available.
+- Verified researcher bibliographies: [Brian Davis](https://dblp.org/pid/04/285-1.html), [Joachim Wagner](https://dblp.org/pid/80/5915-1.html), [Chinonso Cynthia Osuji](https://dblp.org/pid/368/7332.html), [Kanishk Verma](https://dblp.org/pid/293/4527.html), and [Sri Balaaji Natarajan Kalaivendan](https://dblp.org/pid/400/5860.html).
+
+Six additional papers from the newer upstream sync were verified against ACL Anthology and preserved in `publication-overrides.json`. Eleven incomplete records are retained in `src/data/review/pending-publications.json` for editorial review; they are not rendered on the public site.

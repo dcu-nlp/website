@@ -1,0 +1,215 @@
+{
+  "note": "Preserved from upstream automated sync 77a8503. Not published: these records need authoritative dates, full authors and source URLs. Do not re-enable name-based imports to resolve them.",
+  "upstreamGeneratedAt": "2026-09-14T06:18:41.287Z",
+  "items": [
+    {
+      "slug": "collocations-mediating-between-lexical-abstractions-and-textual-concretions",
+      "title": "Collocations - mediating between lexical abstractions and textual concretions",
+      "year": 2026,
+      "authors": ["Joachim Wagner"],
+      "venue": "Proc. of the sixth TALC conference",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["joachim-wagner"],
+      "sources": [
+        {
+          "kind": "orcid-work",
+          "id": "43459535"
+        }
+      ]
+    },
+    {
+      "slug": "dcu-paris13-systems-for-the-sancl-2012-shared-task",
+      "title": "DCU-Paris13 Systems for the SANCL 2012 Shared Task",
+      "year": 2012,
+      "authors": ["Joachim Wagner"],
+      "venue": "Notes of the First Workshop on Syntactic Analysis of Non-Canonical Language (SANCL)",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["joachim-wagner"],
+      "sources": [
+        {
+          "kind": "orcid-work",
+          "id": "43459513"
+        }
+      ]
+    },
+    {
+      "slug": "detecting-grammatical-errors-with-treebank-induced-probabilistic-parsers",
+      "title": "Detecting grammatical errors with treebank-induced, probabilistic parsers",
+      "year": 2012,
+      "authors": ["Joachim Wagner"],
+      "venue": "ORCID indexed publication",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["joachim-wagner"],
+      "sources": [
+        {
+          "kind": "orcid-work",
+          "id": "43459517"
+        }
+      ]
+    },
+    {
+      "slug": "judging-grammaticality-experiments-in-sentence-classification",
+      "title": "Judging Grammaticality: Experiments in Sentence Classification",
+      "year": 2009,
+      "authors": ["Joachim Wagner"],
+      "venue": "CALICO Journal (Special Issue of the 2008 CALICO Workshop on Automatic Analysis of Learner Language)",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["joachim-wagner"],
+      "sources": [
+        {
+          "kind": "orcid-work",
+          "id": "43459522"
+        }
+      ]
+    },
+    {
+      "slug": "c-structures-and-f-structures-for-the-british-national-corpus",
+      "title": "C-Structures and F-Structures for the British National Corpus",
+      "year": 2007,
+      "authors": ["Joachim Wagner"],
+      "venue": "Proceedings of the Twelfth International Lexical Functional Grammar Conference (LFG07)",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["joachim-wagner"],
+      "sources": [
+        {
+          "kind": "orcid-work",
+          "id": "43459531"
+        }
+      ]
+    },
+    {
+      "slug": "dublin-city-university-at-clef-2004-experiments-in-monolingual-bilingual-and-multilingual-retrieval",
+      "title": "Dublin City University at CLEF 2004: Experiments in Monolingual, Bilingual and Multilingual Retrieval",
+      "year": 2005,
+      "authors": ["Joachim Wagner"],
+      "venue": "Multilingual Information Access for Text, Speech and Images: 5th Workshop of the Cross-Language Evaluation Forum (CLEF 2004)",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["joachim-wagner"],
+      "sources": [
+        {
+          "kind": "orcid-work",
+          "id": "43459534"
+        }
+      ]
+    },
+    {
+      "slug": "a-false-friends-exercise-with-authentic-material-retrieved-from-a-corpus",
+      "title": "A false friends exercise with authentic material retrieved from a corpus",
+      "year": 2004,
+      "authors": ["Joachim Wagner"],
+      "venue": "NLP and Speech Technologies in Advanced Language Learning Systems, Proc. of InSTIL/ICALL2004 Symposium on Computer Assisted Language Learning",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["joachim-wagner"],
+      "sources": [
+        {
+          "kind": "orcid-work",
+          "id": "43459537"
+        }
+      ]
+    },
+    {
+      "slug": "using-nlp-technology-in-call",
+      "title": "Using NLP Technology in CALL",
+      "year": 2004,
+      "authors": ["Joachim Wagner"],
+      "venue": "NLP and Speech Technologies in Advanced Language Learning Systems, Proc. of InSTIL/ICALL2004 Symposium on Computer Assisted Language Learning",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["joachim-wagner"],
+      "sources": [
+        {
+          "kind": "orcid-work",
+          "id": "43459538"
+        }
+      ]
+    },
+    {
+      "slug": "datengesteuerte-maschinelle-bersetzung-mit-flachen-analysestrukturen",
+      "title": "Datengesteuerte maschinelle Übersetzung mit flachen Analysestrukturen",
+      "year": 2003,
+      "authors": ["Joachim Wagner"],
+      "venue": "ORCID indexed publication",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["joachim-wagner"],
+      "sources": [
+        {
+          "kind": "orcid-work",
+          "id": "43459539"
+        }
+      ]
+    },
+    {
+      "slug": "evaluation-of-germanet-problems-using-germanet-for-automatic-word-sense-disambiguation",
+      "title": "Evaluation of GermaNet: Problems Using GermaNet for Automatic Word Sense Disambiguation",
+      "year": 2002,
+      "authors": ["Joachim Wagner"],
+      "venue": "Proc. of the LREC Workshop on WordNet Structure and Standardization and how These Affect WordNet Applications and Evaluation",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["joachim-wagner"],
+      "sources": [
+        {
+          "kind": "orcid-work",
+          "id": "43459540"
+        }
+      ]
+    },
+    {
+      "slug": "koks-korpusbasierte-kollokationssuche",
+      "title": "KOKS - Korpusbasierte Kollokationssuche",
+      "year": 2002,
+      "authors": ["Joachim Wagner"],
+      "venue": "ORCID indexed publication",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["joachim-wagner"],
+      "sources": [
+        {
+          "kind": "orcid-work",
+          "id": "43459542"
+        }
+      ]
+    }
+  ]
+}

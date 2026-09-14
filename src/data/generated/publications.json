@@ -1,95 +1,256 @@
 {
-  "generatedAt": "2026-09-14T06:18:41.287Z",
+  "generatedAt": "2026-03-24T15:53:44.668Z",
   "items": [
     {
-      "slug": "collocations-mediating-between-lexical-abstractions-and-textual-concretions",
-      "title": "Collocations - mediating between lexical abstractions and textual concretions",
-      "year": 2026,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "Proc. of the sixth TALC conference",
-      "abstract": "",
-      "tags": [],
-      "paperUrl": "",
-      "award": "",
-      "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
-      "sources": [
-        {
-          "kind": "orcid-work",
-          "id": "43459535"
-        }
-      ]
-    },
-    {
-      "slug": "llm-multi-agent-systems-for-long-triple-set-data-to-text-generation",
-      "title": "LLM Multi-Agent Systems for Long Triple Set Data-to-Text Generation",
-      "year": 2026,
-      "authors": [
-        "Chinonso Cynthia Osuji"
-      ],
-      "venue": "Findings of the Association for Computational Linguistics: ACL 2026",
-      "abstract": "",
-      "tags": [],
-      "paperUrl": "",
-      "award": "",
-      "featured": false,
-      "matchedPeople": [
-        "chinonso-cynthia-osuji"
-      ],
-      "sources": [
-        {
-          "kind": "orcid-work",
-          "id": "219193957"
-        }
-      ]
-    },
-    {
-      "slug": "are-multi-agents-the-new-pipeline-architecture-for-data-to-text-systems",
-      "title": "Are Multi-Agents the new Pipeline Architecture for Data-to-Text Systems?",
+      "slug": "annotating-compositionality-scores-for-irish-noun-compounds-is-hard-work",
+      "title": "Annotating Compositionality Scores for Irish Noun Compounds is Hard Work",
       "year": 2025,
       "authors": [
-        "Chinonso Cynthia Osuji"
+        "Abigail Walsh",
+        "Teresa Clifford",
+        "Emma Daly",
+        "Jane Dunne",
+        "Brian Davis",
+        "Gearóid Ó Cleircín"
       ],
-      "venue": "Proceedings of the 18th International Natural Language Generation Conference",
+      "venue": "CoRR",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://doi.org/10.48550/arXiv.2502.10061",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "chinonso-cynthia-osuji"
-      ],
+      "matchedPeople": ["brian-davis"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "219194706"
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2502-10061",
+          "url": "https://dblp.org/rec/journals/corr/abs-2502-10061",
+          "personId": "04/285-1"
         }
       ]
     },
     {
-      "slug": "dcu-adapt-modpb-at-the-gem24-data-to-text-task-analysis-of-human-evaluation-results",
-      "title": "DCU-ADAPT-modPB at the GEM'24 Data-to-Text Task: Analysis of Human Evaluation Results",
+      "slug": "bullybench-youth-amp-experts-in-the-loop-framework-for-intrinsic-and-extrinsic-cyberbullying-nlp-benchmarking",
+      "title": "BullyBench: Youth & Experts-in-the-loop Framework for Intrinsic and Extrinsic Cyberbullying NLP Benchmarking",
       "year": 2025,
       "authors": [
-        "Chinonso Cynthia Osuji"
+        "Kanishk Verma",
+        "Sri Balaaji Natarajan Kalaivendan",
+        "Arefeh Kazemi",
+        "Joachim Wagner",
+        "Darragh McCashin",
+        "Isobel Walsh",
+        "Sayani Basak",
+        "Sinan Asçi",
+        "Yelena Cherkasova",
+        "Alexandrous Poullis",
+        "James O'Higgins Norman",
+        "Rebecca Umbach",
+        "Tijana Milosevic",
+        "Brian Davis"
       ],
-      "venue": "Proceedings of the 18th International Natural Language Generation Conference: Generation Challenges",
+      "venue": "EMNLP",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://doi.org/10.18653/v1/2025.emnlp-industry.152",
       "award": "",
       "featured": false,
       "matchedPeople": [
-        "chinonso-cynthia-osuji"
+        "kanishk-verma",
+        "sri-balaaji-natarajan-kalaivendan",
+        "joachim-wagner",
+        "brian-davis"
       ],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "219194722"
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "400/5860"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "400/5860"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "400/5860"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "400/5860"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "400/5860"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/VermaKK0MWBACPN25",
+          "url": "https://dblp.org/rec/conf/emnlp/VermaKK0MWBACPN25",
+          "personId": "04/285-1"
+        }
+      ]
+    },
+    {
+      "slug": "from-users-to-co-designers-youth-participation-in-understanding-cyberbullying",
+      "title": "From Users to Co-Designers: Youth Participation in Understanding Cyberbullying",
+      "year": 2025,
+      "authors": [
+        "Kanishk Verma",
+        "Brian Davis",
+        "Tijana Milosevic",
+        "Rebecca Umbach"
+      ],
+      "venue": "IDC",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "https://doi.org/10.1145/3713043.3731485",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["kanishk-verma", "brian-davis"],
+      "sources": [
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/acmidc/Verma0MU25",
+          "url": "https://dblp.org/rec/conf/acmidc/Verma0MU25",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/acmidc/Verma0MU25",
+          "url": "https://dblp.org/rec/conf/acmidc/Verma0MU25",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/acmidc/Verma0MU25",
+          "url": "https://dblp.org/rec/conf/acmidc/Verma0MU25",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/acmidc/Verma0MU25",
+          "url": "https://dblp.org/rec/conf/acmidc/Verma0MU25",
+          "personId": "04/285-1"
+        }
+      ]
+    },
+    {
+      "slug": "gaeilge-bhriste-shamhlacha-cliste-how-clever-are-llms-when-translating-irish-text",
+      "title": "Gaeilge Bhriste ó Shamhlacha Cliste: How Clever Are LLMs When Translating Irish Text?",
+      "year": 2025,
+      "authors": [
+        "Teresa Clifford",
+        "Abigail Walsh",
+        "Brian Davis",
+        "Mícheál J. Ó Meachair"
+      ],
+      "venue": "COLING Workshops",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "https://aclanthology.org/2025.cltw-1.5/",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["brian-davis"],
+      "sources": [
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/coling/CliffordW0M25",
+          "url": "https://dblp.org/rec/conf/coling/CliffordW0M25",
+          "personId": "04/285-1"
         }
       ]
     },
@@ -98,44 +259,403 @@
       "title": "Long-context Reference-based MT Quality Estimation",
       "year": 2025,
       "authors": [
-        "Chinonso Cynthia Osuji"
+        "Sami Ul Haq",
+        "Chinonso Cynthia Osuji",
+        "Sheila Castilho",
+        "Brian Davis"
       ],
-      "venue": "Proceedings of the Tenth Conference on Machine Translation",
+      "venue": "CoRR",
       "abstract": "",
       "tags": [],
-      "paperUrl": "https://doi.org/10.18653/v1/2025.wmt-1.64",
+      "paperUrl": "https://doi.org/10.48550/arXiv.2509.13980",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "chinonso-cynthia-osuji"
-      ],
+      "matchedPeople": ["chinonso-cynthia-osuji"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "219194797"
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2509-13980",
+          "url": "https://dblp.org/rec/journals/corr/abs-2509-13980",
+          "personId": "368/7332"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2509-13980",
+          "url": "https://dblp.org/rec/journals/corr/abs-2509-13980",
+          "personId": "368/7332"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2509-13980",
+          "url": "https://dblp.org/rec/journals/corr/abs-2509-13980",
+          "personId": "368/7332"
         }
       ]
     },
     {
-      "slug": "scaling-up-data-to-text-generation-to-longer-sequences-a-new-dataset-and-benchmark-results-for-generation-from-large-triple-sets",
-      "title": "Scaling Up Data-to-Text Generation to Longer Sequences: A New Dataset and Benchmark Results for Generation from Large Triple Sets",
+      "slug": "proceedings-of-the-5th-celtic-language-technology-workshop",
+      "title": "Proceedings of the 5th Celtic Language Technology Workshop",
       "year": 2025,
       "authors": [
-        "Chinonso Cynthia Osuji"
+        "Brian Davis",
+        "Theodorus Fransen",
+        "Elaine Uí Dhonnchadha",
+        "Abigail Walsh"
       ],
-      "venue": "Proceedings of the 18th International Natural Language Generation Conference",
+      "venue": "COLING Workshops",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://aclanthology.org/2025.cltw-1.0/",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["brian-davis"],
+      "sources": [
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/coling/0001FDW25",
+          "url": "https://dblp.org/rec/conf/coling/0001FDW25",
+          "personId": "04/285-1"
+        }
+      ]
+    },
+    {
+      "slug": "synbullying-a-multi-llm-synthetic-conversational-dataset-for-cyberbullying-detection",
+      "title": "SynBullying: A Multi LLM Synthetic Conversational Dataset for Cyberbullying Detection",
+      "year": 2025,
+      "authors": [
+        "Arefeh Kazemi",
+        "Hamza Qadeer",
+        "Joachim Wagner",
+        "Hossein Hosseini",
+        "Sri Balaaji Natarajan Kalaivendan",
+        "Brian Davis"
+      ],
+      "venue": "CoRR",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "https://doi.org/10.48550/arXiv.2511.11599",
       "award": "",
       "featured": false,
       "matchedPeople": [
-        "chinonso-cynthia-osuji"
+        "joachim-wagner",
+        "sri-balaaji-natarajan-kalaivendan",
+        "brian-davis"
       ],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "219194693"
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2511-11599",
+          "url": "https://dblp.org/rec/journals/corr/abs-2511-11599",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2511-11599",
+          "url": "https://dblp.org/rec/journals/corr/abs-2511-11599",
+          "personId": "400/5860"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2511-11599",
+          "url": "https://dblp.org/rec/journals/corr/abs-2511-11599",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2511-11599",
+          "url": "https://dblp.org/rec/journals/corr/abs-2511-11599",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2511-11599",
+          "url": "https://dblp.org/rec/journals/corr/abs-2511-11599",
+          "personId": "400/5860"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2511-11599",
+          "url": "https://dblp.org/rec/journals/corr/abs-2511-11599",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2511-11599",
+          "url": "https://dblp.org/rec/journals/corr/abs-2511-11599",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2511-11599",
+          "url": "https://dblp.org/rec/journals/corr/abs-2511-11599",
+          "personId": "400/5860"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2511-11599",
+          "url": "https://dblp.org/rec/journals/corr/abs-2511-11599",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2511-11599",
+          "url": "https://dblp.org/rec/journals/corr/abs-2511-11599",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2511-11599",
+          "url": "https://dblp.org/rec/journals/corr/abs-2511-11599",
+          "personId": "400/5860"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2511-11599",
+          "url": "https://dblp.org/rec/journals/corr/abs-2511-11599",
+          "personId": "04/285-1"
+        }
+      ]
+    },
+    {
+      "slug": "synthetic-vs-gold-the-role-of-llm-generated-labels-and-data-in-cyberbullying-detection",
+      "title": "Synthetic vs. Gold: The Role of LLM Generated Labels and Data in Cyberbullying Detection",
+      "year": 2025,
+      "authors": [
+        "Arefeh Kazemi",
+        "Sri Balaaji Natarajan Kalaivendan",
+        "Joachim Wagner",
+        "Hamza Qadeer",
+        "Kanishk Verma",
+        "Brian Davis"
+      ],
+      "venue": "RANLP",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "https://aclanthology.org/2025.ranlp-1.62/",
+      "award": "",
+      "featured": false,
+      "matchedPeople": [
+        "sri-balaaji-natarajan-kalaivendan",
+        "joachim-wagner",
+        "kanishk-verma",
+        "brian-davis"
+      ],
+      "sources": [
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "400/5860"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2502-15860",
+          "url": "https://dblp.org/rec/journals/corr/abs-2502-15860",
+          "personId": "400/5860"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2502-15860",
+          "url": "https://dblp.org/rec/journals/corr/abs-2502-15860",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2502-15860",
+          "url": "https://dblp.org/rec/journals/corr/abs-2502-15860",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2502-15860",
+          "url": "https://dblp.org/rec/journals/corr/abs-2502-15860",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "400/5860"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2502-15860",
+          "url": "https://dblp.org/rec/journals/corr/abs-2502-15860",
+          "personId": "400/5860"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2502-15860",
+          "url": "https://dblp.org/rec/journals/corr/abs-2502-15860",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2502-15860",
+          "url": "https://dblp.org/rec/journals/corr/abs-2502-15860",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2502-15860",
+          "url": "https://dblp.org/rec/journals/corr/abs-2502-15860",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "400/5860"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "400/5860"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2502-15860",
+          "url": "https://dblp.org/rec/journals/corr/abs-2502-15860",
+          "personId": "400/5860"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2502-15860",
+          "url": "https://dblp.org/rec/journals/corr/abs-2502-15860",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2502-15860",
+          "url": "https://dblp.org/rec/journals/corr/abs-2502-15860",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2502-15860",
+          "url": "https://dblp.org/rec/journals/corr/abs-2502-15860",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "400/5860"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/KazemiKWQVD25",
+          "url": "https://dblp.org/rec/conf/ranlp/KazemiKWQVD25",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2502-15860",
+          "url": "https://dblp.org/rec/journals/corr/abs-2502-15860",
+          "personId": "400/5860"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2502-15860",
+          "url": "https://dblp.org/rec/journals/corr/abs-2502-15860",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2502-15860",
+          "url": "https://dblp.org/rec/journals/corr/abs-2502-15860",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2502-15860",
+          "url": "https://dblp.org/rec/journals/corr/abs-2502-15860",
+          "personId": "04/285-1"
         }
       ]
     },
@@ -144,67 +664,88 @@
       "title": "A Systematic Review of Data-to-Text NLG",
       "year": 2024,
       "authors": [
-        "Chinonso Cynthia Osuji"
+        "Chinonso Cynthia Osuji",
+        "Thiago Castro Ferreira",
+        "Brian Davis"
       ],
-      "venue": "ORCID indexed publication",
+      "venue": "CoRR",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://doi.org/10.48550/arXiv.2402.08496",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "chinonso-cynthia-osuji"
-      ],
+      "matchedPeople": ["chinonso-cynthia-osuji"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "219195001"
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2402-08496",
+          "url": "https://dblp.org/rec/journals/corr/abs-2402-08496",
+          "personId": "368/7332"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2402-08496",
+          "url": "https://dblp.org/rec/journals/corr/abs-2402-08496",
+          "personId": "368/7332"
         }
       ]
     },
     {
-      "slug": "dcu-adapt-modpb-at-the-gem24-data-to-text-generation-task-model-hybridisation-for-pipeline-data-to-text-natural-language-generation",
-      "title": "DCU-ADAPT-modPB at the GEM'24 Data-to-Text Generation Task: Model Hybridisation for Pipeline Data-to-Text Natural Language Generation",
+      "slug": "beyond-binary-towards-embracing-complexities-in-cyberbullying-detection-and-intervention-a-position-paper",
+      "title": "Beyond Binary: Towards Embracing Complexities in Cyberbullying Detection and Intervention - a Position Paper",
       "year": 2024,
       "authors": [
-        "Chinonso Cynthia Osuji"
+        "Kanishk Verma",
+        "Kolawole John Adebayo",
+        "Joachim Wagner",
+        "Megan Reynolds",
+        "Rebecca Umbach",
+        "Tijana Milosevic",
+        "Brian Davis"
       ],
-      "venue": "Proceedings of the 17th International Natural Language Generation Conference: Generation Challenges",
+      "venue": "LREC/COLING",
       "abstract": "",
       "tags": [],
-      "paperUrl": "https://doi.org/10.18653/v1/2024.inlg-genchal.7",
+      "paperUrl": "https://aclanthology.org/2024.lrec-main.203",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "chinonso-cynthia-osuji"
-      ],
+      "matchedPeople": ["kanishk-verma", "joachim-wagner", "brian-davis"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "219194877"
-        }
-      ]
-    },
-    {
-      "slug": "imaginary-numbers-evaluating-numerical-referring-expressions-by-neural-end-to-end-surface-realization-systems",
-      "title": "Imaginary Numbers! Evaluating Numerical Referring Expressions by Neural End-to-End Surface Realization Systems",
-      "year": 2024,
-      "authors": [
-        "Chinonso Cynthia Osuji"
-      ],
-      "venue": "Proceedings of the Fifth Workshop on Insights from Negative Results in NLP",
-      "abstract": "",
-      "tags": [],
-      "paperUrl": "https://doi.org/10.18653/v1/2024.insights-1.10",
-      "award": "",
-      "featured": false,
-      "matchedPeople": [
-        "chinonso-cynthia-osuji"
-      ],
-      "sources": [
+          "kind": "dblp-reviewed",
+          "id": "conf/coling/VermaA0RUM024",
+          "url": "https://dblp.org/rec/conf/coling/VermaA0RUM024",
+          "personId": "293/4527"
+        },
         {
-          "kind": "orcid-work",
-          "id": "219194792"
+          "kind": "dblp-reviewed",
+          "id": "conf/coling/VermaA0RUM024",
+          "url": "https://dblp.org/rec/conf/coling/VermaA0RUM024",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/coling/VermaA0RUM024",
+          "url": "https://dblp.org/rec/conf/coling/VermaA0RUM024",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/coling/VermaA0RUM024",
+          "url": "https://dblp.org/rec/conf/coling/VermaA0RUM024",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/coling/VermaA0RUM024",
+          "url": "https://dblp.org/rec/conf/coling/VermaA0RUM024",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/coling/VermaA0RUM024",
+          "url": "https://dblp.org/rec/conf/coling/VermaA0RUM024",
+          "personId": "04/285-1"
         }
       ]
     },
@@ -213,44 +754,341 @@
       "title": "Pipeline Neural Data-to-text with Large Language Models",
       "year": 2024,
       "authors": [
-        "Chinonso Cynthia Osuji"
+        "Chinonso Cynthia Osuji",
+        "Brian Timoney",
+        "Thiago Castro Ferreira",
+        "Brian Davis"
       ],
-      "venue": "Proceedings of the 17th International Natural Language Generation Conference",
+      "venue": "INLG",
       "abstract": "",
       "tags": [],
       "paperUrl": "https://doi.org/10.18653/v1/2024.inlg-main.27",
       "award": "",
       "featured": true,
-      "matchedPeople": [
-        "chinonso-cynthia-osuji"
-      ],
+      "matchedPeople": ["chinonso-cynthia-osuji", "brian-davis"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "219194730"
+          "kind": "dblp-reviewed",
+          "id": "conf/inlg/OsujiTFD24",
+          "url": "https://dblp.org/rec/conf/inlg/OsujiTFD24",
+          "personId": "368/7332"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/inlg/OsujiTFD24",
+          "url": "https://dblp.org/rec/conf/inlg/OsujiTFD24",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/inlg/OsujiTFD24",
+          "url": "https://dblp.org/rec/conf/inlg/OsujiTFD24",
+          "personId": "368/7332"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/inlg/OsujiTFD24",
+          "url": "https://dblp.org/rec/conf/inlg/OsujiTFD24",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/inlg/OsujiTFD24",
+          "url": "https://dblp.org/rec/conf/inlg/OsujiTFD24",
+          "personId": "368/7332"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/inlg/OsujiTFD24",
+          "url": "https://dblp.org/rec/conf/inlg/OsujiTFD24",
+          "personId": "04/285-1"
         }
       ]
     },
     {
-      "slug": "naive-bayes-versus-bert-jupyter-notebook-assignments-for-an-introductory-nlp-course",
-      "title": "Naive Bayes versus BERT: Jupyter notebook assignments for an introductory NLP course",
-      "year": 2021,
+      "slug": "dcu-at-semeval-2023-task-10-a-comparative-analysis-of-encoder-only-and-decoder-only-language-models-with-insights-into-interpretability",
+      "title": "DCU at SemEval-2023 Task 10: A Comparative Analysis of Encoder-only and Decoder-only Language Models with Insights into Interpretability",
+      "year": 2023,
       "authors": [
-        "Joachim Wagner"
+        "Kanishk Verma",
+        "Kolawole Adebayo",
+        "Joachim Wagner",
+        "Brian Davis"
       ],
-      "venue": "Proceedings of the Fifth Workshop on Teaching NLP",
+      "venue": "SemEval@ACL",
       "abstract": "",
       "tags": [],
-      "paperUrl": "https://doi.org/10.18653/v1/2021.teachingnlp-1.20",
+      "paperUrl": "https://doi.org/10.18653/v1/2023.semeval-1.241",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["kanishk-verma", "joachim-wagner", "brian-davis"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "102642144"
+          "kind": "dblp-reviewed",
+          "id": "conf/semeval/VermaA0023",
+          "url": "https://dblp.org/rec/conf/semeval/VermaA0023",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/semeval/VermaA0023",
+          "url": "https://dblp.org/rec/conf/semeval/VermaA0023",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/semeval/VermaA0023",
+          "url": "https://dblp.org/rec/conf/semeval/VermaA0023",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/semeval/VermaA0023",
+          "url": "https://dblp.org/rec/conf/semeval/VermaA0023",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/semeval/VermaA0023",
+          "url": "https://dblp.org/rec/conf/semeval/VermaA0023",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/semeval/VermaA0023",
+          "url": "https://dblp.org/rec/conf/semeval/VermaA0023",
+          "personId": "04/285-1"
+        }
+      ]
+    },
+    {
+      "slug": "investigating-the-saliency-of-sentiment-expressions-in-aspect-based-sentiment-analysis",
+      "title": "Investigating the Saliency of Sentiment Expressions in Aspect-Based Sentiment Analysis",
+      "year": 2023,
+      "authors": ["Joachim Wagner", "Jennifer Foster"],
+      "venue": "ACL",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "https://doi.org/10.18653/v1/2023.findings-acl.807",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["joachim-wagner"],
+      "sources": [
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/acl/0001F23",
+          "url": "https://dblp.org/rec/conf/acl/0001F23",
+          "personId": "80/5915-1"
+        }
+      ]
+    },
+    {
+      "slug": "leveraging-machine-translation-for-cross-lingual-fine-grained-cyberbullying-classification-amongst-pre-adolescents",
+      "title": "Leveraging machine translation for cross-lingual fine-grained cyberbullying classification amongst pre-adolescents",
+      "year": 2023,
+      "authors": [
+        "Kanishk Verma",
+        "Maja Popovic",
+        "Alexandros Poulis",
+        "Yelena Cherkasova",
+        "Cathal Ó Hóbáin",
+        "Angela Mazzone",
+        "Tijana Milosevic",
+        "Brian Davis"
+      ],
+      "venue": "Nat. Lang. Eng.",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "https://doi.org/10.1017/s1351324922000341",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["kanishk-verma", "brian-davis"],
+      "sources": [
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/nle/VermaPPCHMMD23",
+          "url": "https://dblp.org/rec/journals/nle/VermaPPCHMMD23",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/nle/VermaPPCHMMD23",
+          "url": "https://dblp.org/rec/journals/nle/VermaPPCHMMD23",
+          "personId": "04/285-1"
+        }
+      ]
+    },
+    {
+      "slug": "gabert-an-irish-language-model-2022-barry0cclwmf22",
+      "title": "gaBERT - an Irish Language Model",
+      "year": 2022,
+      "authors": [
+        "James Barry",
+        "Joachim Wagner",
+        "Lauren Cassidy",
+        "Alan Cowap",
+        "Teresa Lynn",
+        "Abigail Walsh",
+        "Mícheál J. Ó Meachair",
+        "Jennifer Foster"
+      ],
+      "venue": "LREC",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "https://aclanthology.org/2022.lrec-1.511",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["joachim-wagner"],
+      "sources": [
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/lrec/Barry0CCLWMF22",
+          "url": "https://dblp.org/rec/conf/lrec/Barry0CCLWMF22",
+          "personId": "80/5915-1"
+        }
+      ],
+      "aliases": ["gabert-an-irish-language-model"]
+    },
+    {
+      "slug": "a-review-of-the-state-of-the-art-in-automatic-post-editing",
+      "title": "A review of the state-of-the-art in automatic post-editing",
+      "year": 2021,
+      "authors": [
+        "Félix do Carmo",
+        "Dimitar Shterionov",
+        "Joss Moorkens",
+        "Joachim Wagner",
+        "Murhaf Hossari",
+        "Eric Paquin",
+        "Dag Schmidtke",
+        "Declan Groves",
+        "Andy Way"
+      ],
+      "venue": "Mach. Transl.",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "https://doi.org/10.1007/s10590-020-09252-y",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["joachim-wagner"],
+      "sources": [
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/mt/CarmoSMWHPSGW21",
+          "url": "https://dblp.org/rec/journals/mt/CarmoSMWHPSGW21",
+          "personId": "80/5915-1"
+        }
+      ]
+    },
+    {
+      "slug": "fine-tuning-neural-language-models-for-multidimensional-opinion-mining-of-english-maltese-social-data",
+      "title": "Fine-tuning Neural Language Models for Multidimensional Opinion Mining of English-Maltese Social Data",
+      "year": 2021,
+      "authors": ["Keith Cortis", "Kanishk Verma", "Brian Davis"],
+      "venue": "RANLP",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "https://aclanthology.org/2021.ranlp-1.36",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["kanishk-verma", "brian-davis"],
+      "sources": [
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/CortisV021",
+          "url": "https://dblp.org/rec/conf/ranlp/CortisV021",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/ranlp/CortisV021",
+          "url": "https://dblp.org/rec/conf/ranlp/CortisV021",
+          "personId": "04/285-1"
+        }
+      ]
+    },
+    {
+      "slug": "gabert-an-irish-language-model-2021-abs-2107-12930",
+      "title": "gaBERT - an Irish Language Model",
+      "year": 2021,
+      "authors": [
+        "James Barry",
+        "Joachim Wagner",
+        "Lauren Cassidy",
+        "Alan Cowap",
+        "Teresa Lynn",
+        "Abigail Walsh",
+        "Mícheál J. Ó Meachair",
+        "Jennifer Foster"
+      ],
+      "venue": "CoRR",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "https://arxiv.org/abs/2107.12930",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["joachim-wagner"],
+      "sources": [
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2107-12930",
+          "url": "https://dblp.org/rec/journals/corr/abs-2107-12930",
+          "personId": "80/5915-1"
+        }
+      ],
+      "aliases": ["gabert-an-irish-language-model"]
+    },
+    {
+      "slug": "implicit-aspect-based-opinion-mining-and-analysis-of-airline-industry-based-on-user-generated-reviews",
+      "title": "Implicit Aspect-Based Opinion Mining and Analysis of Airline Industry Based on User-Generated Reviews",
+      "year": 2021,
+      "authors": ["Kanishk Verma", "Brian Davis"],
+      "venue": "SN Comput. Sci.",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "https://doi.org/10.1007/s42979-021-00669-7",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["kanishk-verma", "brian-davis"],
+      "sources": [
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/sncs/VermaD21",
+          "url": "https://dblp.org/rec/journals/sncs/VermaD21",
+          "personId": "293/4527"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/sncs/VermaD21",
+          "url": "https://dblp.org/rec/journals/sncs/VermaD21",
+          "personId": "04/285-1"
+        }
+      ]
+    },
+    {
+      "slug": "revisiting-tri-training-of-dependency-parsers",
+      "title": "Revisiting Tri-training of Dependency Parsers",
+      "year": 2021,
+      "authors": ["Joachim Wagner", "Jennifer Foster"],
+      "venue": "EMNLP",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "https://doi.org/10.18653/v1/2021.emnlp-main.745",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["joachim-wagner"],
+      "sources": [
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/0001F21",
+          "url": "https://dblp.org/rec/conf/emnlp/0001F21",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2109-08122",
+          "url": "https://dblp.org/rec/journals/corr/abs-2109-08122",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -259,44 +1097,25 @@
       "title": "The DCU-EPFL Enhanced Dependency Parser at the IWPT 2021 Shared Task",
       "year": 2021,
       "authors": [
-        "Joachim Wagner"
+        "James Barry",
+        "Alireza Mohammadshahi",
+        "Joachim Wagner",
+        "Jennifer Foster",
+        "James Henderson"
       ],
-      "venue": "Proceedings of the 17th International Conference on Parsing Technologies and the IWPT 2021 Shared Task on Parsing into Enhanced Universal Dependencies (IWPT 2021)",
+      "venue": "CoRR",
       "abstract": "",
       "tags": [],
-      "paperUrl": "https://doi.org/10.18653/v1/2021.iwpt-1.22",
+      "paperUrl": "https://arxiv.org/abs/2107.01982",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "102642197"
-        }
-      ]
-    },
-    {
-      "slug": "a-review-of-the-state-of-the-art-in-automatic-post-editing",
-      "title": "A review of the state-of-the-art in automatic post-editing",
-      "year": 2020,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "Machine Translation",
-      "abstract": "",
-      "tags": [],
-      "paperUrl": "https://doi.org/10.1007/s10590-020-09252-y",
-      "award": "",
-      "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
-      "sources": [
-        {
-          "kind": "orcid-work",
-          "id": "86081261"
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2107-01982",
+          "url": "https://dblp.org/rec/journals/corr/abs-2107-01982",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -305,21 +1124,29 @@
       "title": "A roadmap to neural automatic post-editing: an empirical approach",
       "year": 2020,
       "authors": [
-        "Joachim Wagner"
+        "Dimitar Sht. Shterionov",
+        "Félix do Carmo",
+        "Joss Moorkens",
+        "Murhaf Hossari",
+        "Joachim Wagner",
+        "Eric Paquin",
+        "Dag Schmidtke",
+        "Declan Groves",
+        "Andy Way"
       ],
-      "venue": "Machine Translation",
+      "venue": "Mach. Transl.",
       "abstract": "",
       "tags": [],
       "paperUrl": "https://doi.org/10.1007/s10590-020-09249-7",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "82893678"
+          "kind": "dblp-reviewed",
+          "id": "journals/mt/ShterionovCMHWP20",
+          "url": "https://dblp.org/rec/journals/mt/ShterionovCMHWP20",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -327,45 +1154,53 @@
       "slug": "the-adapt-enhanced-dependency-parser-at-the-iwpt-2020-shared-task",
       "title": "The ADAPT Enhanced Dependency Parser at the IWPT 2020 Shared Task",
       "year": 2020,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "Proceedings of the 16th International Conference on Parsing Technologies and the IWPT 2020 Shared Task on Parsing into Enhanced Universal Dependencies",
+      "authors": ["James Barry", "Joachim Wagner", "Jennifer Foster"],
+      "venue": "IWPT 2020",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://doi.org/10.18653/v1/2020.iwpt-1.24",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "77256991"
+          "kind": "dblp-reviewed",
+          "id": "conf/iwpt/BarryWF20",
+          "url": "https://dblp.org/rec/conf/iwpt/BarryWF20",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2009-01712",
+          "url": "https://dblp.org/rec/journals/corr/abs-2009-01712",
+          "personId": "80/5915-1"
         }
       ]
     },
     {
       "slug": "treebank-embedding-vectors-for-out-of-domain-dependency-parsing",
-      "title": "Treebank Embedding Vectors for Out-of-Domain Dependency Parsing",
+      "title": "Treebank Embedding Vectors for Out-of-domain Dependency Parsing",
       "year": 2020,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+      "authors": ["Joachim Wagner", "James Barry", "Jennifer Foster"],
+      "venue": "ACL",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://doi.org/10.18653/v1/2020.acl-main.778",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "77256941"
+          "kind": "dblp-reviewed",
+          "id": "conf/acl/WagnerBF20",
+          "url": "https://dblp.org/rec/conf/acl/WagnerBF20",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-2005-00800",
+          "url": "https://dblp.org/rec/journals/corr/abs-2005-00800",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -374,21 +1209,23 @@
       "title": "APE through Neural and Statistical MT with Augmented Data. ADAPT/DCU Submission to the WMT 2019 APE Shared Task",
       "year": 2019,
       "authors": [
-        "Joachim Wagner"
+        "Dimitar Sht. Shterionov",
+        "Joachim Wagner",
+        "Félix do Carmo"
       ],
-      "venue": "Proceedings of the Fourth Conference on Machine Translation (Volume 3: Shared Task Papers, Day 2)",
+      "venue": "WMT",
       "abstract": "",
       "tags": [],
       "paperUrl": "https://doi.org/10.18653/v1/w19-5415",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "64960352"
+          "kind": "dblp-reviewed",
+          "id": "conf/wmt/ShterionovWC19",
+          "url": "https://dblp.org/rec/conf/wmt/ShterionovWC19",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -396,22 +1233,26 @@
       "slug": "cross-lingual-parsing-with-polyglot-training-and-multi-treebank-learning-a-faroese-case-study",
       "title": "Cross-lingual Parsing with Polyglot Training and Multi-treebank Learning: A Faroese Case Study",
       "year": 2019,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "Proceedings of the 2nd Workshop on Deep Learning Approaches for Low-Resource NLP (DeepLo 2019)",
+      "authors": ["James Barry", "Joachim Wagner", "Jennifer Foster"],
+      "venue": "DeepLo@EMNLP-IJCNLP",
       "abstract": "",
       "tags": [],
-      "paperUrl": "https://doi.org/10.18653/v1/d19-6118",
+      "paperUrl": "https://doi.org/10.18653/v1/D19-6118",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "64959826"
+          "kind": "dblp-reviewed",
+          "id": "conf/acl-deeplo/BarryWF19",
+          "url": "https://dblp.org/rec/conf/acl-deeplo/BarryWF19",
+          "personId": "80/5915-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "journals/corr/abs-1910-07938",
+          "url": "https://dblp.org/rec/journals/corr/abs-1910-07938",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -419,22 +1260,20 @@
       "slug": "part-of-speech-tagging-of-code-mixed-social-media-content-pipeline-stacking-and-joint-modelling",
       "title": "Part-of-speech Tagging of Code-mixed Social Media Content: Pipeline, Stacking and Joint Modelling",
       "year": 2016,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "Proceedings of the Second Workshop on Computational Approaches to Code Switching",
+      "authors": ["Utsab Barman", "Joachim Wagner", "Jennifer Foster"],
+      "venue": "CodeSwitch@EMNLP",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://doi.org/10.18653/v1/W16-5804",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459502"
+          "kind": "dblp-reviewed",
+          "id": "conf/acl-codeswitch/BarmanWF16",
+          "url": "https://dblp.org/rec/conf/acl-codeswitch/BarmanWF16",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -442,22 +1281,20 @@
       "slug": "dcu-adapt-learning-edit-operations-for-microblog-normalisation-with-the-generalised-perceptron",
       "title": "DCU-ADAPT: Learning Edit Operations for Microblog Normalisation with the Generalised Perceptron",
       "year": 2015,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "Proceedings of the Workshop on Noisy User-generated Text",
+      "authors": ["Joachim Wagner", "Jennifer Foster"],
+      "venue": "NUT@IJCNLP",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://doi.org/10.18653/v1/W15-4314",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459503"
+          "kind": "dblp-reviewed",
+          "id": "conf/aclnut/WagnerF15",
+          "url": "https://dblp.org/rec/conf/aclnut/WagnerF15",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -466,21 +1303,24 @@
       "title": "Code Mixing: A Challenge for Language Identification in the Language of Social Media",
       "year": 2014,
       "authors": [
-        "Joachim Wagner"
+        "Utsab Barman",
+        "Amitava Das",
+        "Joachim Wagner",
+        "Jennifer Foster"
       ],
-      "venue": "Proceedings of the First Workshop on Computational Approaches to Code Switching",
+      "venue": "CodeSwitch@EMNLP",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://doi.org/10.3115/v1/W14-3902",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459509"
+          "kind": "dblp-reviewed",
+          "id": "conf/acl-codeswitch/BarmanDWF14",
+          "url": "https://dblp.org/rec/conf/acl-codeswitch/BarmanDWF14",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -489,21 +1329,24 @@
       "title": "DCU-UVT: Word-Level Language Classification with Code-Mixed Data",
       "year": 2014,
       "authors": [
-        "Joachim Wagner"
+        "Utsab Barman",
+        "Joachim Wagner",
+        "Grzegorz Chrupala",
+        "Jennifer Foster"
       ],
-      "venue": "Proceedings of the First Workshop on Computational Approaches to Code Switching",
+      "venue": "CodeSwitch@EMNLP",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://doi.org/10.3115/v1/W14-3915",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459511"
+          "kind": "dblp-reviewed",
+          "id": "conf/acl-codeswitch/BarmanWCF14",
+          "url": "https://dblp.org/rec/conf/acl-codeswitch/BarmanWCF14",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -512,21 +1355,27 @@
       "title": "DCU: Aspect-based Polarity Classification for SemEval Task 4",
       "year": 2014,
       "authors": [
-        "Joachim Wagner"
+        "Joachim Wagner",
+        "Piyush Arora",
+        "Santiago Cortes",
+        "Utsab Barman",
+        "Dasha Bogdanova",
+        "Jennifer Foster",
+        "Lamia Tounsi"
       ],
-      "venue": "Proceedings of the 8th International Workshop on Semantic Evaluation (SemEval 2014)",
+      "venue": "SemEval@COLING",
       "abstract": "",
       "tags": [],
-      "paperUrl": "https://doi.org/10.3115/v1/S14-2036",
+      "paperUrl": "https://doi.org/10.3115/v1/s14-2036",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459505"
+          "kind": "dblp-reviewed",
+          "id": "conf/semeval/WagnerACBBFT14",
+          "url": "https://dblp.org/rec/conf/semeval/WagnerACBBFT14",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -535,21 +1384,24 @@
       "title": "Target-Centric Features for Translation Quality Estimation",
       "year": 2014,
       "authors": [
-        "Joachim Wagner"
+        "Chris Hokamp",
+        "Iacer Calixto",
+        "Joachim Wagner",
+        "Jian Zhang"
       ],
-      "venue": "Proceedings of the Ninth Workshop on Statistical Machine Translation",
+      "venue": "WMT@ACL",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://doi.org/10.3115/v1/w14-3341",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459507"
+          "kind": "dblp-reviewed",
+          "id": "conf/wmt/HokampCWZ14",
+          "url": "https://dblp.org/rec/conf/wmt/HokampCWZ14",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -558,44 +1410,26 @@
       "title": "DCU-Symantec at the WMT 2013 Quality Estimation Shared Task",
       "year": 2013,
       "authors": [
-        "Joachim Wagner"
+        "Raphael Rubino",
+        "Joachim Wagner",
+        "Jennifer Foster",
+        "Johann Roturier",
+        "Rasoul Samad Zadeh Kaljahi",
+        "Fred Hollowood"
       ],
-      "venue": "Proceedings of the Eighth Workshop on Statistical Machine Translation",
+      "venue": "WMT@ACL",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://aclanthology.org/W13-2249/",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459512"
-        }
-      ]
-    },
-    {
-      "slug": "dcu-paris13-systems-for-the-sancl-2012-shared-task",
-      "title": "DCU-Paris13 Systems for the SANCL 2012 Shared Task",
-      "year": 2012,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "Notes of the First Workshop on Syntactic Analysis of Non-Canonical Language (SANCL)",
-      "abstract": "",
-      "tags": [],
-      "paperUrl": "",
-      "award": "",
-      "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
-      "sources": [
-        {
-          "kind": "orcid-work",
-          "id": "43459513"
+          "kind": "dblp-reviewed",
+          "id": "conf/wmt/RubinoWFRKH13",
+          "url": "https://dblp.org/rec/conf/wmt/RubinoWFRKH13",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -604,44 +1438,26 @@
       "title": "DCU-Symantec Submission for the WMT 2012 Quality Estimation Task",
       "year": 2012,
       "authors": [
-        "Joachim Wagner"
+        "Raphaël Rubino",
+        "Jennifer Foster",
+        "Joachim Wagner",
+        "Johann Roturier",
+        "Rasoul Samad Zadeh Kaljahi",
+        "Fred Hollowood"
       ],
-      "venue": "Proceedings of the Seventh Workshop on Statistical Machine Translation",
+      "venue": "WMT@NAACL-HLT",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://aclanthology.org/W12-3117/",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459514"
-        }
-      ]
-    },
-    {
-      "slug": "detecting-grammatical-errors-with-treebank-induced-probabilistic-parsers",
-      "title": "Detecting grammatical errors with treebank-induced, probabilistic parsers",
-      "year": 2012,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "ORCID indexed publication",
-      "abstract": "",
-      "tags": [],
-      "paperUrl": "",
-      "award": "",
-      "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
-      "sources": [
-        {
-          "kind": "orcid-work",
-          "id": "43459517"
+          "kind": "dblp-reviewed",
+          "id": "conf/wmt/RubinoFWRKH12",
+          "url": "https://dblp.org/rec/conf/wmt/RubinoFWRKH12",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -650,21 +1466,28 @@
       "title": "#hardtoparse: POS Tagging and Parsing the Twitterverse",
       "year": 2011,
       "authors": [
-        "Joachim Wagner"
+        "Jennifer Foster",
+        "Özlem Çetinoglu",
+        "Joachim Wagner",
+        "Joseph Le Roux",
+        "Stephen Hogan",
+        "Joakim Nivre",
+        "Deirdre Hogan",
+        "Josef van Genabith"
       ],
-      "venue": "Analyzing Microtext: Papers from the 2011 AAAI Workshop (WS-11-05)",
+      "venue": "Analyzing Microtext",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "http://www.aaai.org/ocs/index.php/WS/AAAIW11/paper/view/3912",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459518"
+          "kind": "dblp-reviewed",
+          "id": "conf/aaai/FosterCWRHNHG11",
+          "url": "https://dblp.org/rec/conf/aaai/FosterCWRHNHG11",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -673,21 +1496,24 @@
       "title": "Comparing the Use of Edited and Unedited Text in Parser Self-Training",
       "year": 2011,
       "authors": [
-        "Joachim Wagner"
+        "Jennifer Foster",
+        "Özlem Çetinoglu",
+        "Joachim Wagner",
+        "Josef van Genabith"
       ],
-      "venue": "Proceedings of the 12th International Conference on Parsing Technologies (IWPT 2011, Dublin, Ireland)",
+      "venue": "IWPT",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://aclanthology.org/W11-2925/",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459520"
+          "kind": "dblp-reviewed",
+          "id": "conf/iwpt/FosterCWG11",
+          "url": "https://dblp.org/rec/conf/iwpt/FosterCWG11",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -696,44 +1522,87 @@
       "title": "From News to Comment: Resources and Benchmarks for Parsing the Language of Web 2.0",
       "year": 2011,
       "authors": [
-        "Joachim Wagner"
+        "Jennifer Foster",
+        "Özlem Çetinoglu",
+        "Joachim Wagner",
+        "Joseph Le Roux",
+        "Joakim Nivre",
+        "Deirdre Hogan",
+        "Josef van Genabith"
       ],
-      "venue": "Proceedings of 5th International Joint Conference on Natural Language Processing (IJCNLP2011)",
+      "venue": "IJCNLP",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://aclanthology.org/I11-1100/",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459519"
+          "kind": "dblp-reviewed",
+          "id": "conf/ijcnlp/FosterCWRNHG11",
+          "url": "https://dblp.org/rec/conf/ijcnlp/FosterCWRNHG11",
+          "personId": "80/5915-1"
         }
       ]
     },
     {
-      "slug": "judging-grammaticality-experiments-in-sentence-classification",
-      "title": "Judging Grammaticality: Experiments in Sentence Classification",
+      "slug": "controlled-natural-language-for-semantic-annotation",
+      "title": "Controlled Natural Language for Semantic Annotation",
       "year": 2009,
       "authors": [
-        "Joachim Wagner"
+        "Brian Davis",
+        "Pradeep Varma",
+        "Siegfried Handschuh",
+        "Laura Dragan",
+        "Hamish Cunningham"
       ],
-      "venue": "CALICO Journal (Special Issue of the 2008 CALICO Workshop on Automatic Analysis of Learner Language)",
+      "venue": "CNL",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://ceur-ws.org/Vol-448/paper19.pdf",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["brian-davis"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459522"
+          "kind": "dblp-reviewed",
+          "id": "conf/cnl/DavisVHDC09",
+          "url": "https://dblp.org/rec/conf/cnl/DavisVHDC09",
+          "personId": "04/285-1"
+        },
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/esws/DavisVHDC09",
+          "url": "https://dblp.org/rec/conf/esws/DavisVHDC09",
+          "personId": "04/285-1"
+        }
+      ]
+    },
+    {
+      "slug": "on-designing-controlled-natural-languages-for-semantic-annotation",
+      "title": "On Designing Controlled Natural Languages for Semantic Annotation",
+      "year": 2009,
+      "authors": [
+        "Brian Davis",
+        "Pradeep Dantuluri",
+        "Laura Dragan",
+        "Siegfried Handschuh",
+        "Hamish Cunningham"
+      ],
+      "venue": "CNL",
+      "abstract": "",
+      "tags": [],
+      "paperUrl": "https://doi.org/10.1007/978-3-642-14418-9_12",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["brian-davis"],
+      "sources": [
+        {
+          "kind": "dblp-reviewed",
+          "id": "conf/cnl/DavisDDHC09",
+          "url": "https://dblp.org/rec/conf/cnl/DavisDDHC09",
+          "personId": "04/285-1"
         }
       ]
     },
@@ -741,22 +1610,20 @@
       "slug": "the-effect-of-correcting-grammatical-errors-on-parse-probabilities",
       "title": "The effect of correcting grammatical errors on parse probabilities",
       "year": 2009,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "Proceedings of the 11th International Conference on Parsing Technologies (IWPT'09)",
+      "authors": ["Joachim Wagner", "Jennifer Foster"],
+      "venue": "IWPT",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://aclanthology.org/W09-3827/",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459521"
+          "kind": "dblp-reviewed",
+          "id": "conf/iwpt/WagnerF09",
+          "url": "https://dblp.org/rec/conf/iwpt/WagnerF09",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -764,22 +1631,20 @@
       "slug": "adapting-a-wsj-trained-parser-to-grammatically-noisy-text",
       "title": "Adapting a WSJ-Trained Parser to Grammatically Noisy Text",
       "year": 2008,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "Proceedings of the 46th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies (ACL-08: HLT)",
+      "authors": ["Jennifer Foster", "Joachim Wagner", "Josef van Genabith"],
+      "venue": "ACL",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://aclanthology.org/P08-2056/",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459529"
+          "kind": "dblp-reviewed",
+          "id": "conf/acl/FosterWG08",
+          "url": "https://dblp.org/rec/conf/acl/FosterWG08",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -788,21 +1653,24 @@
       "title": "Parser-Based Retraining for Domain Adaptation of Probabilistic Generators",
       "year": 2008,
       "authors": [
-        "Joachim Wagner"
+        "Deirdre Hogan",
+        "Jennifer Foster",
+        "Joachim Wagner",
+        "Josef van Genabith"
       ],
-      "venue": "Proceedings of the Fifth International Natural Language Generation Conference (INLG 2008)",
+      "venue": "INLG",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://aclanthology.org/W08-1122/",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459523"
+          "kind": "dblp-reviewed",
+          "id": "conf/inlg/HoganFWG08",
+          "url": "https://dblp.org/rec/conf/inlg/HoganFWG08",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -810,22 +1678,20 @@
       "slug": "a-comparative-evaluation-of-deep-and-shallow-approaches-to-the-automatic-detection-of-common-grammatical-errors",
       "title": "A Comparative Evaluation of Deep and Shallow Approaches to the Automatic Detection of Common Grammatical Errors",
       "year": 2007,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "Proceedings of the 2007 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning (EMNLP-CoNLL)",
+      "authors": ["Joachim Wagner", "Jennifer Foster", "Josef van Genabith"],
+      "venue": "EMNLP-CoNLL",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://aclanthology.org/D07-1012/",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459532"
+          "kind": "dblp-reviewed",
+          "id": "conf/emnlp/WagnerFG07",
+          "url": "https://dblp.org/rec/conf/emnlp/WagnerFG07",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -834,44 +1700,24 @@
       "title": "Adapting WSJ-Trained Parsers to the British National Corpus using In-Domain Self-Training",
       "year": 2007,
       "authors": [
-        "Joachim Wagner"
+        "Jennifer Foster",
+        "Joachim Wagner",
+        "Djamé Seddah",
+        "Josef van Genabith"
       ],
-      "venue": "Proceedings of the Tenth International Conference on Parsing Technologies (IWPT'07)",
+      "venue": "IWPT",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://aclanthology.org/W07-2204/",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459530"
-        }
-      ]
-    },
-    {
-      "slug": "c-structures-and-f-structures-for-the-british-national-corpus",
-      "title": "C-Structures and F-Structures for the British National Corpus",
-      "year": 2007,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "Proceedings of the Twelfth International Lexical Functional Grammar Conference (LFG07)",
-      "abstract": "",
-      "tags": [],
-      "paperUrl": "",
-      "award": "",
-      "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
-      "sources": [
-        {
-          "kind": "orcid-work",
-          "id": "43459531"
+          "kind": "dblp-reviewed",
+          "id": "conf/iwpt/FosterWSG07",
+          "url": "https://dblp.org/rec/conf/iwpt/FosterWSG07",
+          "personId": "80/5915-1"
         }
       ]
     },
@@ -879,162 +1725,57 @@
       "slug": "nadja-nesselhauf-collocations-in-a-learner-corpus",
       "title": "Nadja Nesselhauf, Collocations in a Learner Corpus",
       "year": 2006,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "Machine Translation",
+      "authors": ["Joachim Wagner"],
+      "venue": "Mach. Transl.",
       "abstract": "",
       "tags": [],
       "paperUrl": "https://doi.org/10.1007/s10590-007-9028-8",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459526"
+          "kind": "dblp-reviewed",
+          "id": "journals/mt/Wagner06",
+          "url": "https://dblp.org/rec/journals/mt/Wagner06",
+          "personId": "80/5915-1"
         }
       ]
     },
     {
       "slug": "dublin-city-university-at-clef-2004-experiments-in-monolingual-bilingual-and-multilingual-retrieval",
       "title": "Dublin City University at CLEF 2004: Experiments in Monolingual, Bilingual and Multilingual Retrieval",
-      "year": 2005,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "Multilingual Information Access for Text, Speech and Images: 5th Workshop of the Cross-Language Evaluation Forum (CLEF 2004)",
-      "abstract": "",
-      "tags": [],
-      "paperUrl": "",
-      "award": "",
-      "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
-      "sources": [
-        {
-          "kind": "orcid-work",
-          "id": "43459534"
-        }
-      ]
-    },
-    {
-      "slug": "a-false-friends-exercise-with-authentic-material-retrieved-from-a-corpus",
-      "title": "A false friends exercise with authentic material retrieved from a corpus",
       "year": 2004,
       "authors": [
+        "Gareth J. F. Jones",
+        "Michael Burke",
+        "John Judge",
+        "Anna Khasin",
+        "Adenike M. Lam-Adesina",
         "Joachim Wagner"
       ],
-      "venue": "NLP and Speech Technologies in Advanced Language Learning Systems, Proc. of InSTIL/ICALL2004 Symposium on Computer Assisted Language Learning",
+      "venue": "CLEF",
       "abstract": "",
       "tags": [],
-      "paperUrl": "",
+      "paperUrl": "https://ceur-ws.org/Vol-1170/CLEF2004wn-adhoc-JonesEt2004.pdf",
       "award": "",
       "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
+      "matchedPeople": ["joachim-wagner"],
       "sources": [
         {
-          "kind": "orcid-work",
-          "id": "43459537"
-        }
-      ]
-    },
-    {
-      "slug": "using-nlp-technology-in-call",
-      "title": "Using NLP Technology in CALL",
-      "year": 2004,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "NLP and Speech Technologies in Advanced Language Learning Systems, Proc. of InSTIL/ICALL2004 Symposium on Computer Assisted Language Learning",
-      "abstract": "",
-      "tags": [],
-      "paperUrl": "",
-      "award": "",
-      "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
-      "sources": [
+          "kind": "dblp-reviewed",
+          "id": "conf/clef/JonesBJKLW04",
+          "url": "https://dblp.org/rec/conf/clef/JonesBJKLW04",
+          "personId": "80/5915-1"
+        },
         {
-          "kind": "orcid-work",
-          "id": "43459538"
-        }
-      ]
-    },
-    {
-      "slug": "datengesteuerte-maschinelle-bersetzung-mit-flachen-analysestrukturen",
-      "title": "Datengesteuerte maschinelle Übersetzung mit flachen Analysestrukturen",
-      "year": 2003,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "ORCID indexed publication",
-      "abstract": "",
-      "tags": [],
-      "paperUrl": "",
-      "award": "",
-      "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
-      "sources": [
-        {
-          "kind": "orcid-work",
-          "id": "43459539"
-        }
-      ]
-    },
-    {
-      "slug": "evaluation-of-germanet-problems-using-germanet-for-automatic-word-sense-disambiguation",
-      "title": "Evaluation of GermaNet: Problems Using GermaNet for Automatic Word Sense Disambiguation",
-      "year": 2002,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "Proc. of the LREC Workshop on WordNet Structure and Standardization and how These Affect WordNet Applications and Evaluation",
-      "abstract": "",
-      "tags": [],
-      "paperUrl": "",
-      "award": "",
-      "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
-      "sources": [
-        {
-          "kind": "orcid-work",
-          "id": "43459540"
-        }
-      ]
-    },
-    {
-      "slug": "koks-korpusbasierte-kollokationssuche",
-      "title": "KOKS - Korpusbasierte Kollokationssuche",
-      "year": 2002,
-      "authors": [
-        "Joachim Wagner"
-      ],
-      "venue": "ORCID indexed publication",
-      "abstract": "",
-      "tags": [],
-      "paperUrl": "",
-      "award": "",
-      "featured": false,
-      "matchedPeople": [
-        "joachim-wagner"
-      ],
-      "sources": [
-        {
-          "kind": "orcid-work",
-          "id": "43459542"
+          "kind": "dblp-reviewed",
+          "id": "conf/clef/JonesBJKLW05",
+          "url": "https://dblp.org/rec/conf/clef/JonesBJKLW05",
+          "personId": "80/5915-1"
         }
       ]
     }
-  ]
+  ],
+  "reviewedAt": "2026-09-13T23:21:30.319Z"
 }

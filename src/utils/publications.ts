@@ -1,3 +1,8 @@
+import {
+  cleanText,
+  cleanAuthor,
+  samePublication,
+} from './publication-records.mjs';
 import type { CollectionEntry } from 'astro:content';
 import generatedPublicationData from '@/data/generated/publications.json';
 import publicationOverrides from '@/data/publication-overrides.json';
@@ -7,10 +12,12 @@ export interface PublicationSourceRef {
   kind: string;
   id: string;
   url?: string;
+  personId?: string;
 }
 
 export interface NormalizedPublication {
   slug: string;
+  aliases?: string[];
   title: string;
   year: number;
   authors: string[];
@@ -47,18 +54,6 @@ const generated = generatedPublicationData as {
 };
 
 const overrides = publicationOverrides as PublicationOverrides;
-
-function normalizeText(value: string) {
-  return value
-    .toLowerCase()
-    .replace(/&/g, 'and')
-    .replace(/[^a-z0-9]+/g, ' ')
-    .trim();
-}
-
-function createPublicationKey(title: string, year: number) {
-  return `${normalizeText(title)}::${year}`;
-}
 
 export function slugifyPublicationTitle(value: string) {
   return value
@@ -117,34 +112,44 @@ export function getGeneratedPublications(): NormalizedPublication[] {
 export function mergePublications(
   collectionEntries: CollectionEntry<'publications'>[],
 ): NormalizedPublication[] {
-  const byKey = new Map<string, NormalizedPublication>();
-
-  for (const generatedPublication of getGeneratedPublications()) {
-    byKey.set(
-      createPublicationKey(
-        generatedPublication.title,
-        generatedPublication.year,
-      ),
-      generatedPublication,
-    );
+  const merged: NormalizedPublication[] = [];
+  for (const publication of [
+    ...getGeneratedPublications(),
+    ...collectionEntries.map(mapCollectionPublication),
+  ]) {
+    const normalized = {
+      ...publication,
+      title: cleanText(publication.title),
+      authors: publication.authors.map(cleanAuthor),
+      venue: cleanText(publication.venue),
+      abstract: cleanText(publication.abstract),
+    };
+    const index = merged.findIndex((item) => samePublication(item, normalized));
+    if (index === -1) merged.push(normalized);
+    else {
+      const existing = merged[index];
+      merged[index] = {
+        ...existing,
+        ...normalized,
+        aliases: [
+          ...new Set([
+            ...(existing.aliases ?? []),
+            ...(normalized.aliases ?? []),
+            existing.slug,
+            normalized.slug,
+          ]),
+        ].filter((slug) => slug !== normalized.slug),
+        sources: [...existing.sources, ...normalized.sources],
+        matchedPeople: [
+          ...new Set([...existing.matchedPeople, ...normalized.matchedPeople]),
+        ],
+      };
+    }
   }
-
-  for (const entry of collectionEntries) {
-    const mapped = mapCollectionPublication(entry);
-    const key = createPublicationKey(mapped.title, mapped.year);
-    const existing = byKey.get(key);
-
-    byKey.set(key, {
-      ...(existing ?? {}),
-      ...mapped,
-      detailSource: 'content',
-    });
-  }
-
-  return [...byKey.values()].sort((left, right) => {
-    if (right.year !== left.year) return right.year - left.year;
-    return left.title.localeCompare(right.title);
-  });
+  return merged.sort(
+    (left, right) =>
+      right.year - left.year || left.title.localeCompare(right.title),
+  );
 }
 
 export function getFeaturedPublications(
@@ -157,15 +162,7 @@ export function getFeaturedPublications(
 }
 
 export function sanitizePublicationDisplayText(value: string) {
-  return value
-    .replace(/DCU-ADAPT/gu, 'DCU')
-    .replace(/ADAPT\/DCU/gu, 'DCU')
-    .replace(/\bADAPT\b/gu, '')
-    .replace(/\bNLG\b/gu, 'language generation')
-    .replace(/Natural Language Generation/gu, 'Language Generation')
-    .replace(/\s{2,}/gu, ' ')
-    .replace(/\s+([:,.])/gu, '$1')
-    .trim();
+  return cleanText(value);
 }
 
 export function findPublicationBySlug(

@@ -1,29 +1,313 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '@/layouts/Layout.astro';
-import PageHero from '@/components/PageHero.astro';
 import PublicationCard from '@/components/PublicationCard.astro';
 import { mergePublications } from '@/utils/publications';
 
 const publications = mergePublications(await getCollection('publications'));
+const years = [...new Set(publications.map((item) => item.year))].sort(
+  (a, b) => b - a,
+);
+const authors = [...new Set(publications.flatMap((item) => item.authors))].sort(
+  (a, b) => a.localeCompare(b),
+);
+const topics = [...new Set(publications.flatMap((item) => item.tags))].sort();
 ---
 
 <Layout
   title="Publications"
-  description="Journal articles, conference papers, and workshop publications from the group."
+  description="Explore the group's publications by title, author, year, and research topic."
 >
-  <PageHero
-    eyebrow="Publications"
-    title="Publications across online safety, NLP, and multilingual language technology"
-    description="This page brings together the group's conference papers, workshop publications, and other public research outputs."
-  />
   <section class="section-space">
-    <div class="container-shell grid gap-6 lg:grid-cols-2">
-      {
-        publications.map((publication) => (
-          <PublicationCard publication={publication} />
-        ))
-      }
+    <div class="container-shell publication-archive">
+      <p class="eyebrow">Research library</p>
+      <h1 class="mt-3 text-5xl text-ink-900 sm:text-6xl">Publications</h1>
+      <p class="mt-4 max-w-2xl text-ink-600">
+        Explore our work in online safety, multilingual NLP, and language
+        generation. Read the papers and find a citation in one place.
+      </p>
+      <form
+        id="publication-filters"
+        class="filter-panel surface mt-8 p-5 sm:p-7"
+        role="search"
+        aria-label="Search publications"
+        hidden
+      >
+        <label class="search-label" for="publication-query"
+          >Search the archive
+          <input
+            id="publication-query"
+            type="search"
+            name="q"
+            placeholder="Search titles, authors, venues, or topics…"
+            autocomplete="off"
+            aria-controls="publication-results"
+          />
+        </label>
+        <div class="filter-selects mt-4">
+          <label for="publication-year"
+            >Year
+            <select
+              id="publication-year"
+              name="year"
+              aria-controls="publication-results"
+              ><option value="">All years</option>{
+                years.map((year) => <option value={year}>{year}</option>)
+              }</select
+            >
+          </label>
+          <label for="publication-author"
+            >Author
+            <select
+              id="publication-author"
+              name="author"
+              aria-controls="publication-results"
+              ><option value="">All authors</option>{
+                authors.map((author) => (
+                  <option value={author}>{author}</option>
+                ))
+              }</select
+            >
+          </label>
+          <label for="publication-topic"
+            >Topic
+            <select
+              id="publication-topic"
+              name="topic"
+              aria-controls="publication-results"
+              ><option value="">All topics</option>{
+                topics.map((topic) => <option value={topic}>{topic}</option>)
+              }</select
+            >
+          </label>
+          <button class="button-secondary self-end" type="reset"
+            >Clear filters</button
+          >
+        </div>
+      </form>
+      <noscript
+        ><p class="mt-6 text-ink-600">
+          All publications are listed below. Enable JavaScript to search and
+          filter them.
+        </p></noscript
+      >
+      <div class="my-6 flex flex-wrap items-center justify-between gap-4">
+        <p
+          id="publication-count"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+          class="text-sm text-ink-600"
+        >
+          {publications.length} publications · newest first
+        </p>
+        <div
+          id="publication-view"
+          role="group"
+          aria-label="Publication layout"
+          hidden
+        >
+          <button type="button" data-view="list" aria-pressed="true"
+            >List</button
+          >
+          <button type="button" data-view="grid" aria-pressed="false"
+            >Grid</button
+          >
+        </div>
+      </div>
+      <div
+        id="publication-results"
+        class="publication-results"
+        data-view="list"
+      >
+        {
+          publications.map((publication) => (
+            <div
+              data-publication
+              data-record={JSON.stringify({
+                title: publication.title,
+                authors: publication.authors,
+                year: publication.year,
+                venue: publication.venue,
+                tags: publication.tags,
+              })}
+            >
+              <PublicationCard publication={publication} headingLevel="h2" />
+            </div>
+          ))
+        }
+      </div>
+      <div id="publication-empty" class="surface p-8 text-center" hidden>
+        <h2 class="text-3xl text-ink-900">No publications found</h2>
+        <p class="mt-3 text-ink-600">
+          Try fewer keywords, choose a different year, or clear your filters.
+        </p>
+        <button
+          class="button-secondary mt-5"
+          type="reset"
+          form="publication-filters">Clear filters</button
+        >
+      </div>
     </div>
   </section>
 </Layout>
+
+<script>
+  import { matchesPublication } from '@/utils/publication-filters.mjs';
+  const form = document.querySelector<HTMLFormElement>('#publication-filters')!;
+  const results = document.querySelector<HTMLElement>('#publication-results')!;
+  const count = document.querySelector<HTMLElement>('#publication-count')!;
+  const empty = document.querySelector<HTMLElement>('#publication-empty')!;
+  const view = document.querySelector<HTMLElement>('#publication-view')!;
+  const fields = ['q', 'year', 'author', 'topic'] as const;
+  const controls = Object.fromEntries(
+    fields.map((name) => [
+      name,
+      form.elements.namedItem(name) as HTMLInputElement | HTMLSelectElement,
+    ]),
+  );
+  const rows = Array.from(
+    results.querySelectorAll<HTMLElement>('[data-publication]'),
+  ).map((element) => ({
+    element,
+    record: JSON.parse(element.dataset.record!),
+  }));
+  const setView = (layout: string) => {
+    results.dataset.view = layout === 'grid' ? 'grid' : 'list';
+    view
+      .querySelectorAll<HTMLButtonElement>('button')
+      .forEach((button) =>
+        button.setAttribute(
+          'aria-pressed',
+          String(button.dataset.view === results.dataset.view),
+        ),
+      );
+  };
+  const update = (writeUrl = true) => {
+    const filters = Object.fromEntries(
+      fields.map((name) => [name, controls[name].value]),
+    );
+    let visible = 0;
+    for (const row of rows) {
+      row.element.hidden = !matchesPublication(row.record, filters);
+      if (!row.element.hidden) visible++;
+    }
+    count.textContent = `${visible} of ${rows.length} publications · newest first`;
+    empty.hidden = visible !== 0;
+    if (writeUrl) {
+      const url = new URL(location.href);
+      fields.forEach((name) =>
+        filters[name]
+          ? url.searchParams.set(name, filters[name])
+          : url.searchParams.delete(name),
+      );
+      if (results.dataset.view === 'grid') url.searchParams.set('view', 'grid');
+      else url.searchParams.delete('view');
+      history.replaceState(null, '', url);
+    }
+  };
+  const restore = () => {
+    const params = new URLSearchParams(location.search);
+    fields.forEach((name) => {
+      controls[name].value = params.get(name) ?? '';
+    });
+    setView(params.get('view') ?? 'list');
+    update(false);
+  };
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    update();
+  });
+  form.addEventListener('input', () => update());
+  form.addEventListener('change', () => update());
+  form.addEventListener('reset', (event) => {
+    event.preventDefault();
+    fields.forEach((name) => {
+      controls[name].value = '';
+    });
+    update();
+    controls.q.focus();
+  });
+  view.querySelectorAll<HTMLButtonElement>('button').forEach((button) =>
+    button.addEventListener('click', () => {
+      setView(button.dataset.view!);
+      update();
+    }),
+  );
+  window.addEventListener('popstate', restore);
+  restore();
+  form.hidden = false;
+  view.hidden = false;
+</script>
+
+<style>
+  .publication-archive {
+    max-width: 76rem;
+  }
+  .filter-selects {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.5fr auto;
+    gap: 1rem;
+  }
+  label {
+    display: block;
+    min-width: 0;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-ink-900);
+  }
+  input,
+  select {
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0.8rem 1rem;
+    width: 100%;
+    min-width: 0;
+    border: 1px solid var(--color-ink-300);
+    border-radius: 0.75rem;
+    background: white;
+    color: var(--color-ink-900);
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  input:focus-visible,
+  select:focus-visible {
+    outline: 2px solid var(--color-accent-500);
+    outline-offset: 3px;
+  }
+  .publication-results {
+    display: grid;
+    gap: 1.25rem;
+  }
+  .publication-results [hidden],
+  [hidden] {
+    display: none !important;
+  }
+  #publication-view {
+    display: flex;
+    gap: 0.25rem;
+    border: 1px solid var(--color-ink-300);
+    border-radius: 2rem;
+    padding: 0.25rem;
+  }
+  #publication-view button {
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  #publication-view button[aria-pressed='true'] {
+    background: var(--color-ink-900);
+    color: white;
+  }
+  @media (min-width: 768px) {
+    .publication-results[data-view='grid'] {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 767px) {
+    .filter-selects {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

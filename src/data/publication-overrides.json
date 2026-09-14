@@ -8,5 +8,166 @@
   ],
   "excludedSourceIds": [],
   "manualCorrections": {},
-  "manualEntries": []
+  "manualEntries": [
+    {
+      "slug": "llm-multi-agent-systems-for-long-triple-set-data-to-text-generation",
+      "title": "LLM Multi-Agent Systems for Long Triple Set Data-to-Text Generation",
+      "year": 2026,
+      "authors": [
+        "Chinonso Cynthia Osuji",
+        "Simon Mille",
+        "Mark Andrade",
+        "Jane Adkins",
+        "Ornait O’Connell",
+        "Elaine Uí Dhonnchadha",
+        "Bláithín Heffernan",
+        "Fírinne Nic an tSaoir",
+        "Anja Belz",
+        "Thiago Castro Ferreira",
+        "Brian Davis"
+      ],
+      "venue": "Findings of the Association for Computational Linguistics: ACL 2026",
+      "abstract": "",
+      "tags": ["natural language generation", "data-to-text"],
+      "paperUrl": "https://aclanthology.org/2026.findings-acl.1712/",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["chinonso-cynthia-osuji"],
+      "sources": [
+        {
+          "kind": "acl-reviewed",
+          "id": "2026.findings-acl.1712",
+          "url": "https://aclanthology.org/2026.findings-acl.1712/"
+        }
+      ]
+    },
+    {
+      "slug": "are-multi-agents-the-new-pipeline-architecture-for-data-to-text-systems",
+      "title": "Are Multi-Agents the new Pipeline Architecture for Data-to-Text Systems?",
+      "year": 2025,
+      "authors": [
+        "Chinonso Cynthia Osuji",
+        "Brian Timoney",
+        "Mark Andrade",
+        "Thiago Castro Ferreira",
+        "Brian Davis"
+      ],
+      "venue": "Proceedings of the 18th International Natural Language Generation Conference",
+      "abstract": "",
+      "tags": ["natural language generation", "data-to-text"],
+      "paperUrl": "https://aclanthology.org/2025.inlg-main.33/",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["chinonso-cynthia-osuji"],
+      "sources": [
+        {
+          "kind": "acl-reviewed",
+          "id": "2025.inlg-main.33",
+          "url": "https://aclanthology.org/2025.inlg-main.33/"
+        }
+      ]
+    },
+    {
+      "slug": "dcu-adapt-modpb-at-the-gem24-data-to-text-task-analysis-of-human-evaluation-results",
+      "title": "DCU-ADAPT-modPB at the GEM’24 Data-to-Text Task: Analysis of Human Evaluation Results",
+      "year": 2025,
+      "authors": [
+        "Rudali Huidrom",
+        "Chinonso Cynthia Osuji",
+        "Kolawole Adebayo",
+        "Thiago Castro Ferreira",
+        "Brian Davis"
+      ],
+      "venue": "Proceedings of the 18th International Natural Language Generation Conference: Generation Challenges",
+      "abstract": "",
+      "tags": ["natural language generation", "data-to-text"],
+      "paperUrl": "https://aclanthology.org/2025.inlg-genchal.3/",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["chinonso-cynthia-osuji"],
+      "sources": [
+        {
+          "kind": "acl-reviewed",
+          "id": "2025.inlg-genchal.3",
+          "url": "https://aclanthology.org/2025.inlg-genchal.3/"
+        }
+      ]
+    },
+    {
+      "slug": "scaling-up-data-to-text-generation-to-longer-sequences-a-new-dataset-and-benchmark-results-for-generation-from-large-triple-sets",
+      "title": "Scaling Up Data-to-Text Generation to Longer Sequences: A New Dataset and Benchmark Results for Generation from Large Triple Sets",
+      "year": 2025,
+      "authors": [
+        "Chinonso Cynthia Osuji",
+        "Simon Mille",
+        "Ornait O’Connell",
+        "Thiago Castro Ferreira",
+        "Anja Belz",
+        "Brian Davis"
+      ],
+      "venue": "Proceedings of the 18th International Natural Language Generation Conference",
+      "abstract": "",
+      "tags": ["natural language generation", "data-to-text"],
+      "paperUrl": "https://aclanthology.org/2025.inlg-main.47/",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["chinonso-cynthia-osuji"],
+      "sources": [
+        {
+          "kind": "acl-reviewed",
+          "id": "2025.inlg-main.47",
+          "url": "https://aclanthology.org/2025.inlg-main.47/"
+        }
+      ]
+    },
+    {
+      "slug": "imaginary-numbers-evaluating-numerical-referring-expressions-by-neural-end-to-end-surface-realization-systems",
+      "title": "Imaginary Numbers! Evaluating Numerical Referring Expressions by Neural End-to-End Surface Realization Systems",
+      "year": 2024,
+      "authors": [
+        "Rossana Cunha",
+        "Osuji Chinonso",
+        "João Campos",
+        "Brian Timoney",
+        "Brian Davis",
+        "Fabio Cozman",
+        "Adriana Pagano",
+        "Thiago Castro Ferreira"
+      ],
+      "venue": "Proceedings of the Fifth Workshop on Insights from Negative Results in NLP",
+      "abstract": "",
+      "tags": ["natural language generation", "data-to-text"],
+      "paperUrl": "https://aclanthology.org/2024.insights-1.10/",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["chinonso-cynthia-osuji"],
+      "sources": [
+        {
+          "kind": "acl-reviewed",
+          "id": "2024.insights-1.10",
+          "url": "https://aclanthology.org/2024.insights-1.10/"
+        }
+      ]
+    },
+    {
+      "slug": "naive-bayes-versus-bert-jupyter-notebook-assignments-for-an-introductory-nlp-course",
+      "title": "Naive Bayes versus BERT: Jupyter notebook assignments for an introductory NLP course",
+      "year": 2021,
+      "authors": ["Jennifer Foster", "Joachim Wagner"],
+      "venue": "Proceedings of the Fifth Workshop on Teaching NLP",
+      "abstract": "",
+      "tags": ["teaching", "nlp"],
+      "paperUrl": "https://aclanthology.org/2021.teachingnlp-1.20/",
+      "award": "",
+      "featured": false,
+      "matchedPeople": ["joachim-wagner"],
+      "sources": [
+        {
+          "kind": "acl-reviewed",
+          "id": "2021.teachingnlp-1.20",
+          "url": "https://aclanthology.org/2021.teachingnlp-1.20/"
+        }
+      ]
+    }
+  ]
 }

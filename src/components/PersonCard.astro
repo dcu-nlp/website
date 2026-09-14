@@ -39,9 +39,11 @@ const tileId = `person-tile-${slug}`;
       {
         data.photo ? (
           <img
+            loading="lazy"
+            decoding="async"
             src={getAssetHref(data.photo)}
-            alt={`Portrait placeholder for ${data.name}`}
-            class="mt-5 h-56 w-full rounded-[1.5rem] object-cover"
+            alt={`Portrait of ${data.name}`}
+            class="mt-5 h-56 w-full rounded-[1.5rem] object-cover object-top"
           />
         ) : (
           <div class="mt-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-ink-900 text-lg font-semibold text-white">
@@ -74,6 +76,8 @@ const tileId = `person-tile-${slug}`;
     </div>
 
     <div
+      inert
+      aria-hidden="true"
       class="flip-tile__face flip-tile__face--back card-surface flex h-full flex-col justify-between p-6"
     >
       <div>

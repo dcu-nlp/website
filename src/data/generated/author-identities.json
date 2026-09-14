@@ -1,54 +1,35 @@
 {
-  "generatedAt": "2026-09-14T06:18:41.287Z",
+  "reviewedAt": "2026-09-13T23:21:30.324Z",
   "authors": [
     {
       "slug": "brian-davis",
       "name": "Dr Brian Davis",
-      "dblpId": "04/285",
-      "orcidId": "0000-0002-1175-1796",
-      "publicationNameVariants": [
-        "Brian Davis",
-        "Dr Brian Davis"
-      ]
+      "dblpId": "04/285-1",
+      "orcidId": ""
     },
     {
       "slug": "chinonso-cynthia-osuji",
       "name": "Chinonso Cynthia Osuji",
-      "dblpId": "",
-      "orcidId": "0000-0001-7684-9500",
-      "publicationNameVariants": [
-        "Chinonso Cynthia Osuji",
-        "Chinonso Osuji"
-      ]
+      "dblpId": "368/7332",
+      "orcidId": ""
     },
     {
       "slug": "joachim-wagner",
       "name": "Dr Joachim Wagner",
-      "dblpId": "80/5915",
-      "orcidId": "0000-0002-8290-3849",
-      "publicationNameVariants": [
-        "Joachim Wagner",
-        "Dr Joachim Wagner"
-      ]
+      "dblpId": "80/5915-1",
+      "orcidId": ""
     },
     {
       "slug": "kanishk-verma",
       "name": "Dr Kanishk Verma",
-      "dblpId": "",
-      "orcidId": "0000-0002-4936-1902",
-      "publicationNameVariants": [
-        "Kanishk Verma"
-      ]
+      "dblpId": "293/4527",
+      "orcidId": ""
     },
     {
       "slug": "sri-balaaji-natarajan-kalaivendan",
       "name": "Sri Balaaji Natarajan Kalaivendan",
       "dblpId": "400/5860",
-      "orcidId": "",
-      "publicationNameVariants": [
-        "Sri Balaaji Natarajan Kalaivendan",
-        "Balaaji Kalaivendan"
-      ]
+      "orcidId": ""
     }
   ]
 }

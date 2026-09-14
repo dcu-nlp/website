@@ -53,13 +53,22 @@ const { title, description, pathname = Astro.url.pathname } = Astro.props;
           const tile = document.getElementById(targetId);
           if (!tile) return;
           const isFlipped = tile.classList.toggle('is-flipped');
-          const triggerLabel = isFlipped
-            ? 'Show front of card'
-            : 'Show back of card';
+          const front = tile.querySelector(
+            '.flip-tile__face:not(.flip-tile__face--back)',
+          );
+          const back = tile.querySelector('.flip-tile__face--back');
+          [front, back].forEach((face, index) => {
+            if (!face) return;
+            const inactive = index === 0 ? isFlipped : !isFlipped;
+            face.inert = inactive;
+            face.setAttribute('aria-hidden', String(inactive));
+          });
           tile.querySelectorAll('[data-flip-trigger]').forEach((node) => {
             node.setAttribute('aria-pressed', String(isFlipped));
-            node.setAttribute('aria-label', triggerLabel);
           });
+          (isFlipped ? back : front)
+            ?.querySelector('[data-flip-trigger]')
+            ?.focus({ preventScroll: true });
         };
 
         document.addEventListener('click', (event) => {

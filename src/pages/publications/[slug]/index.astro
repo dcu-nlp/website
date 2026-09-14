@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Layout from '@/layouts/Layout.astro';
+import { getSiteHref } from '@/utils/urls';
 import { getEntrySlug } from '@/utils/content';
 import {
   mergePublications,
@@ -11,8 +12,16 @@ export async function getStaticPaths() {
   const publications = await getCollection('publications');
   const mergedPublications = mergePublications(publications);
 
-  return mergedPublications.map((publication) => ({
-    params: { slug: publication.slug },
+  const routes = new Map(
+    mergedPublications.map((publication) => [publication.slug, publication]),
+  );
+  for (const publication of mergedPublications) {
+    for (const alias of publication.aliases ?? []) {
+      if (!routes.has(alias)) routes.set(alias, publication);
+    }
+  }
+  return [...routes.entries()].map(([slug, publication]) => ({
+    params: { slug },
     props: {
       publication,
       contentSlug:
@@ -32,10 +41,19 @@ const displayTitle = sanitizePublicationDisplayText(publication.title);
 const displayAbstract = sanitizePublicationDisplayText(publication.abstract);
 ---
 
-<Layout title={displayTitle} description={displayAbstract}>
+<Layout
+  title={displayTitle}
+  description={displayAbstract ||
+    `${publication.authors.join(', ')}. ${publication.venue}, ${publication.year}.`}
+  pathname={getSiteHref(`/publications/${publication.slug}/`)}
+>
   <section class="section-space">
     <div class="container-shell">
       <div class="surface px-5 py-8 sm:px-8 sm:py-10 lg:px-12">
+        <a
+          class="text-link mb-6 inline-block"
+          href={getSiteHref('/publications/')}>← All publications</a
+        >
         <p class="eyebrow">{publication.venue}</p>
         <h1 class="detail-page-title mt-4 max-w-5xl text-ink-900">
           {displayTitle}
