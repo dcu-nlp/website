@@ -9,9 +9,16 @@ export function GET() {
       theme_color: '#003135',
       icons: [
         {
-          src: 'favicon.svg',
-          sizes: 'any',
-          type: 'image/svg+xml',
+          src: 'nlp-icon-192.png',
+          sizes: '192x192',
+          type: 'image/png',
+          purpose: 'any',
+        },
+        {
+          src: 'nlp-icon-512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any',
         },
       ],
     }),
