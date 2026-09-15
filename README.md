@@ -1,4 +1,4 @@
-# NLG group Website
+# NLP Applications Group Website
 
 An Astro-powered, fully static academic research group website built with TypeScript, Tailwind CSS, MDX, and Astro Content Collections. The project is designed for GitHub Pages deployment and keeps editable content in structured collection entries rather than hardcoded page markup.
 
