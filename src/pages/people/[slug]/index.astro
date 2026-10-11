@@ -1,4 +1,8 @@
 ---
+import PublicationCard from '@/components/PublicationCard.astro';
+import ProjectCard from '@/components/ProjectCard.astro';
+import { mergePublications } from '@/utils/publications';
+import { isAuthor, isMember } from '@/utils/relationships';
 import ExternalLink from '@/components/ExternalLink.astro';
 import { getCollection, render } from 'astro:content';
 import Layout from '@/layouts/Layout.astro';
@@ -15,6 +19,12 @@ export async function getStaticPaths() {
 
 const { person } = Astro.props;
 const { Content } = await render(person);
+const projects = (await getCollection('projects')).filter((project) =>
+  isMember(person, project),
+);
+const papers = mergePublications(await getCollection('publications')).filter(
+  (paper) => isAuthor(person, paper),
+);
 ---
 
 <Layout title={person.data.name} description={person.data.bio}>
@@ -138,6 +148,34 @@ const { Content } = await render(person);
           <Content />
         </article>
       </div>
+      {
+        projects.length > 0 && (
+          <section class="mt-10">
+            <>
+              <h2 class="text-3xl text-ink-900">Projects</h2>
+              <div class="mt-5 grid gap-6 md:grid-cols-2">
+                {projects.map((project) => (
+                  <ProjectCard project={project} />
+                ))}
+              </div>
+            </>
+          </section>
+        )
+      }
+      {
+        papers.length > 0 && (
+          <section class="mt-10">
+            <>
+              <h2 class="text-3xl text-ink-900">Publications</h2>
+              <div class="mt-5 grid gap-6 md:grid-cols-2">
+                {papers.map((publication) => (
+                  <PublicationCard publication={publication} />
+                ))}
+              </div>
+            </>
+          </section>
+        )
+      }
     </div>
   </section>
 </Layout>

@@ -1,9 +1,17 @@
 ---
+import { opportunities as advertisedOpenings } from '@/utils/opportunities';
+import { getSiteHref } from '@/utils/urls';
 import CTASection from '@/components/CTASection.astro';
 import Card from '@/components/Card.astro';
 import Layout from '@/layouts/Layout.astro';
 import PageHero from '@/components/PageHero.astro';
 
+const openings = advertisedOpenings.filter(
+  (entry) =>
+    !entry.deadline ||
+    entry.deadline.toISOString().slice(0, 10) >=
+      new Date().toISOString().slice(0, 10),
+);
 const opportunities = [
   {
     title: 'Doctoral study',
@@ -44,10 +52,40 @@ const opportunities = [
       }
     </div>
   </section>
+  <section class="section-space">
+    <div class="container-shell">
+      <h2 class="text-3xl text-ink-900">Current openings</h2>
+      {
+        openings.length ? (
+          <div class="mt-6 grid gap-6 md:grid-cols-2">
+            {openings.map((data) => (
+              <article class="card-surface p-6">
+                <h3 class="text-2xl">{data.title}</h3>
+                <p class="mt-3">{data.summary}</p>
+                {data.deadline && (
+                  <p class="mt-3">
+                    Deadline: {data.deadline.toISOString().slice(0, 10)}
+                  </p>
+                )}
+                <a class="text-link mt-3" href={data.url}>
+                  Application details
+                </a>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <p class="mt-4 text-ink-600">
+            There are currently no advertised openings listed here. You can
+            still contact the group to discuss research interests.
+          </p>
+        )
+      }
+    </div>
+  </section>
   <CTASection
     title="Prospective students and collaborators are encouraged to reach out with a focused note"
     description="Share your background, relevant work, and the research questions or partnership ideas you want to pursue. Thoughtful, specific emails are the most helpful starting point."
     primaryLabel="Contact the team"
-    primaryHref={`${import.meta.env.BASE_URL}contact/`}
+    primaryHref={getSiteHref("/contact/")}
   />
 </Layout>

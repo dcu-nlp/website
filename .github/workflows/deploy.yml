@@ -45,6 +45,12 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
 
+      - name: Check links and assets
+        run: npm run check:site
+
+      - name: Review dated content
+        run: npm run review:content
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

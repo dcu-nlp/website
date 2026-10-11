@@ -1,0 +1,36 @@
+name: Validate and package preview
+on:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 8 * * 1'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - run: npm run check:site
+      - run: npm run review:content
+      - name: Check external links on scheduled and manual runs
+        if: github.event_name != 'pull_request'
+        run: npm run check:site -- --external
+      - name: Upload downloadable site preview and review reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-preview-and-reports
+          path: |
+            dist/
+            site-check-report.json
+            content-review.md
+          retention-days: 14

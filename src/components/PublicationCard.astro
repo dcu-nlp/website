@@ -1,4 +1,5 @@
 ---
+import PublicationTools from '@/components/PublicationTools.astro';
 import ExternalLink from '@/components/ExternalLink.astro';
 import type { NormalizedPublication } from '@/utils/publications';
 import { getSiteHref } from '@/utils/urls';
@@ -78,4 +79,5 @@ const citation = `${publication.authors.join(', ')}. ${publication.year}. ${publ
       {citation}
     </p>
   </details>
+  <PublicationTools publication={publication} />
 </article>

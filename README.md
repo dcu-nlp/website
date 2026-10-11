@@ -138,3 +138,58 @@ The scheduled workflow lives in `.github/workflows/sync-publications.yml` and ru
 - Verified researcher bibliographies: [Brian Davis](https://dblp.org/pid/04/285-1.html), [Joachim Wagner](https://dblp.org/pid/80/5915-1.html), [Chinonso Cynthia Osuji](https://dblp.org/pid/368/7332.html), [Kanishk Verma](https://dblp.org/pid/293/4527.html), and [Sri Balaaji Natarajan Kalaivendan](https://dblp.org/pid/400/5860.html).
 
 Six additional papers from the newer upstream sync were verified against ACL Anthology and preserved in `publication-overrides.json`. Eleven incomplete records are retained in `src/data/review/pending-publications.json` for editorial review; they are not rendered on the public site.
+
+## Research links, resources, and citations
+
+People and project pages now include related work. Group authors are matched using
+verified `matchedPeople` IDs or exact normalized profile names/name variants;
+project publications are matched by editorial paper URLs, rather than topic guesses.
+Keep project `people` names aligned with profile names. Add paper links to a project
+to associate its publications in both directions.
+
+Publication frontmatter supports `pdfUrl`, `codeUrl`, `dataUrl`, and `bibtex`.
+Supply publisher BibTeX when available; otherwise the site creates a basic `@misc`
+citation without guessing publication type or DOI. BibTeX remains selectable with
+JavaScript disabled or clipboard access unavailable.
+
+The code/datasets catalogue at `/resources/` uses `src/data/resources/*.mdx`.
+Every record needs `title`, `summary`, `kind` (`code`, `dataset`, `code-and-data`),
+`documentationUrl`, `license`, `access`, and `reviewedAt` (YYYY-MM-DD).
+Optional `repositoryUrl`, `dataUrl`, `projects`, and `publications` provide links;
+relationship arrays contain content slugs. Confirm access and licence terms before
+adding an entry. Unknown licences must be explicitly described, not inferred from
+public repository visibility. The initial BullyBench entry was checked against its
+[repository README](https://github.com/kanishk-r-verma/bully-bench#readme).
+
+## Opportunities and content review
+
+Advertised openings are stored in `src/data/opportunities.json` (currently empty).
+Each record requires `id`, `title`, `summary`, `url`, and `reviewBy`; `deadline` is
+optional. Dates use YYYY-MM-DD. Expired openings are omitted from the Join page
+at build time, and the weekly workflow rebuilds for review. To update the live page
+after a deadline, run the deployment workflow (scheduled validation does not deploy).
+
+After building, `npm run review:content` creates `content-review.md`, flagging expired
+openings, overdue review dates, and resource information older than 180 days.
+Warnings call for editorial review without preventing unrelated fixes from shipping.
+
+## Validation and previews
+
+- `npm run build` validates content and generates the site.
+- `npm run check:site` checks built internal links, fragments, images, and CSS assets.
+- `npm run check:site -- --external` additionally checks public HTTP links; confirmed
+  404/410 responses fail, while rate limiting, access restrictions, and network errors
+  are reported for review.
+- `npm run review:content` produces the dated-content report.
+
+Pull requests run tests, build validation, and internal checks, then upload
+`site-preview-and-reports` as a downloadable GitHub Actions artifact. This is a
+reviewable build, not a hosted preview deployment. Download it and serve its `dist`
+directory locally, or run `npm ci` and `npm run dev` on the PR branch to preview.
+Weekly/manual validation also checks external links. Production deployment checks
+internal links and assets before uploading the site.
+
+Gallery controls support pause/play, keyboard access, automatic pause on hover/focus,
+and reduced-motion preferences. Mobile navigation closes on Escape, outside clicks,
+and focus leaving the menu. Global controls have visible focus outlines and minimum
+44px touch targets.

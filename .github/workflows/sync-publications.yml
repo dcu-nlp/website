@@ -34,7 +34,7 @@ jobs:
         run: npm run sync:publications
 
       - name: Validate publication data and site
-        run: npm test && npm run build
+        run: npm test && npm run build && npm run check:site && npm run review:content
 
       - name: Commit publication updates
         run: |

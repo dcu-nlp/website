@@ -47,6 +47,8 @@ const publications = defineCollection({
       featured: z.boolean().default(false),
       paperUrl: z.string().url().optional(),
       codeUrl: z.string().url().optional(),
+      pdfUrl: z.string().url().optional(),
+      dataUrl: z.string().url().optional(),
       bibtex: z.string().optional(),
       award: z.string().optional(),
       image: image().optional(),
@@ -95,4 +97,27 @@ const teaching = defineCollection({
   }),
 });
 
-export const collections = { people, publications, projects, news, teaching };
+const resources = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/data/resources' }),
+  schema: z.object({
+    title: z.string(),
+    summary: z.string(),
+    kind: z.enum(['code', 'dataset', 'code-and-data']),
+    repositoryUrl: z.string().url().optional(),
+    dataUrl: z.string().url().optional(),
+    documentationUrl: z.string().url(),
+    license: z.string(),
+    access: z.string(),
+    projects: z.array(z.string()).default([]),
+    publications: z.array(z.string()).default([]),
+    reviewedAt: z.coerce.date(),
+  }),
+});
+export const collections = {
+  people,
+  publications,
+  projects,
+  news,
+  teaching,
+  resources,
+};

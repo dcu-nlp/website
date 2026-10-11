@@ -12,6 +12,8 @@ export const siteConfig = {
     { label: 'Research', href: '#research' },
     { label: 'Publications', href: '#publications' },
     { label: 'People', href: '#people' },
+    { label: 'Resources', href: '/resources/' },
+    { label: 'Join', href: '/join/' },
     { label: 'Contact', href: '#contact' },
   ],
   partnerLogos: [

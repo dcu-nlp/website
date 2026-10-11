@@ -26,6 +26,9 @@ export interface NormalizedPublication {
   tags: string[];
   paperUrl?: string;
   codeUrl?: string;
+  pdfUrl?: string;
+  dataUrl?: string;
+  bibtex?: string;
   award?: string;
   featured: boolean;
   matchedPeople: string[];
@@ -77,6 +80,9 @@ export function mapCollectionPublication(
     tags: entry.data.tags,
     paperUrl: entry.data.paperUrl,
     codeUrl: entry.data.codeUrl,
+    pdfUrl: entry.data.pdfUrl,
+    dataUrl: entry.data.dataUrl,
+    bibtex: entry.data.bibtex,
     award: entry.data.award,
     featured: entry.data.featured || overrides.featuredSlugs.includes(slug),
     matchedPeople: [],

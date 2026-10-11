@@ -51,7 +51,7 @@ const { title, description, pathname = Astro.url.pathname } = Astro.props;
       Skip to content
     </a>
     <Header />
-    <main id="content">
+    <main id="content" tabindex="-1">
       <slot />
     </main>
     <Footer />
@@ -148,6 +148,22 @@ const { title, description, pathname = Astro.url.pathname } = Astro.props;
             );
             if (index < 0) index = 0;
             let timer;
+            const motion = window.matchMedia(
+              '(prefers-reduced-motion: reduce)',
+            );
+            let paused = motion.matches;
+            const pauseButton = gallery.querySelector('[data-gallery-pause]');
+            const syncPause = () => {
+              pauseButton?.setAttribute('aria-pressed', String(paused));
+              if (pauseButton) {
+                pauseButton.disabled = motion.matches;
+                pauseButton.textContent = motion.matches
+                  ? 'Slideshow paused (reduced motion)'
+                  : paused
+                    ? 'Play slideshow'
+                    : 'Pause slideshow';
+              }
+            };
             const leaveTimers = new WeakMap();
 
             const showSlide = (nextIndex) => {
@@ -171,6 +187,10 @@ const { title, description, pathname = Astro.url.pathname } = Astro.props;
               }
 
               slides.forEach((slide, slideIndex) => {
+                slide.setAttribute(
+                  'aria-hidden',
+                  String(slideIndex !== nextIndex),
+                );
                 if (slideIndex === nextIndex) {
                   slide.classList.remove('is-leaving');
                   slide.classList.add('is-active');
@@ -190,6 +210,14 @@ const { title, description, pathname = Astro.url.pathname } = Astro.props;
 
             const startRotation = () => {
               clearInterval(timer);
+              if (
+                paused ||
+                motion.matches ||
+                document.hidden ||
+                gallery.matches(':hover') ||
+                gallery.contains(document.activeElement)
+              )
+                return;
               timer = window.setInterval(() => {
                 showSlide((index + 1) % slides.length);
               }, rotationDelay);
@@ -204,6 +232,24 @@ const { title, description, pathname = Astro.url.pathname } = Astro.props;
               });
             }
 
+            pauseButton?.addEventListener('click', () => {
+              paused = !paused;
+              syncPause();
+              startRotation();
+            });
+            gallery.addEventListener('mouseenter', () => clearInterval(timer));
+            gallery.addEventListener('mouseleave', startRotation);
+            gallery.addEventListener('focusin', () => clearInterval(timer));
+            gallery.addEventListener('focusout', () =>
+              setTimeout(startRotation, 0),
+            );
+            document.addEventListener('visibilitychange', startRotation);
+            motion.addEventListener('change', () => {
+              paused = motion.matches;
+              syncPause();
+              startRotation();
+            });
+            syncPause();
             startRotation();
           });
 
@@ -263,6 +309,12 @@ const { title, description, pathname = Astro.url.pathname } = Astro.props;
               };
 
               const handlePointerMove = (event) => {
+                if (
+                  window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                ) {
+                  resetParallax(surface);
+                  return;
+                }
                 const rect = surface.getBoundingClientRect();
                 if (!rect.width || !rect.height) return;
 
