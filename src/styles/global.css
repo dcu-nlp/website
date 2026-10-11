@@ -410,9 +410,8 @@
   .campus-gallery {
     @apply relative;
     --gallery-rotation-duration: 12000ms;
-    --gallery-fade-duration: 2600ms;
-    --gallery-motion-ease: cubic-bezier(0.16, 1, 0.3, 1);
-    --gallery-kenburns-ease: cubic-bezier(0.3, 0, 0.18, 1);
+    --gallery-fade-duration: 1200ms;
+    --gallery-motion-ease: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .campus-gallery__viewport {
@@ -440,71 +439,24 @@
     @apply absolute inset-0;
     opacity: 0;
     pointer-events: none;
-    transform: scale(1.006);
-    filter: saturate(0.96) brightness(0.9);
-    transition:
-      opacity var(--gallery-fade-duration) var(--gallery-motion-ease),
-      transform var(--gallery-fade-duration) var(--gallery-motion-ease),
-      filter var(--gallery-fade-duration) var(--gallery-motion-ease);
+    transition: opacity var(--gallery-fade-duration) var(--gallery-motion-ease);
   }
 
   .campus-gallery__slide.is-active {
     opacity: 1;
     pointer-events: auto;
-    transform: scale(1);
-    filter: saturate(1) brightness(0.99);
     z-index: 2;
   }
 
   .campus-gallery__image-motion {
-    transform: scale(1.045) translate3d(0.75%, 0.55%, 0);
-    transform-origin: center center;
-    transition:
-      transform var(--gallery-fade-duration) var(--gallery-motion-ease),
-      filter var(--gallery-fade-duration) var(--gallery-motion-ease);
-    will-change: transform, filter;
+    transform: none;
   }
 
-  .campus-gallery__slide:nth-child(2) .campus-gallery__image-motion {
-    transform: scale(1.045) translate3d(-0.7%, 0.45%, 0);
-  }
-
-  .campus-gallery__slide:nth-child(3) .campus-gallery__image-motion {
-    transform: scale(1.043) translate3d(0.18%, -0.52%, 0);
-  }
-
-  .campus-gallery__slide.is-active .campus-gallery__image-motion {
-    animation: campus-gallery-kenburns var(--gallery-rotation-duration)
-      var(--gallery-kenburns-ease) forwards;
-    filter: saturate(1.015) contrast(1.02);
-  }
-
-  .campus-gallery__slide:nth-child(2).is-active .campus-gallery__image-motion {
-    animation-name: campus-gallery-kenburns-reverse;
-  }
-
-  .campus-gallery__slide:nth-child(3).is-active .campus-gallery__image-motion {
-    animation-name: campus-gallery-kenburns-center;
-  }
-
+  /* Keep the outgoing photo solid underneath the incoming dissolve.
+     Fading both layers exposes the background and causes a dark flash. */
   .campus-gallery__slide.is-leaving {
-    opacity: 0;
-    transform: scale(1.002);
-    filter: saturate(0.92) brightness(0.84);
+    opacity: 1;
     z-index: 1;
-  }
-
-  .campus-gallery__slide.is-leaving .campus-gallery__image-motion {
-    transform: scale(1.064) translate3d(-0.55%, -0.42%, 0);
-    filter: saturate(0.98) contrast(0.99);
-  }
-
-  .campus-gallery__slide:nth-child(2).is-leaving .campus-gallery__image-motion {
-    transform: scale(1.064) translate3d(0.5%, -0.36%, 0);
-  }
-
-  .campus-gallery__slide:nth-child(3).is-leaving .campus-gallery__image-motion {
-    transform: scale(1.062) translate3d(0.34%, 0.42%, 0);
   }
 
   .campus-gallery__image {
@@ -856,47 +808,5 @@
   .campus-gallery__image {
     min-height: 43rem;
     height: 43rem;
-  }
-}
-
-@keyframes campus-gallery-kenburns {
-  0% {
-    transform: scale(1.045) translate3d(0.75%, 0.55%, 0);
-  }
-
-  50% {
-    transform: scale(1.057) translate3d(0.18%, -0.12%, 0);
-  }
-
-  100% {
-    transform: scale(1.07) translate3d(-0.65%, -0.48%, 0);
-  }
-}
-
-@keyframes campus-gallery-kenburns-reverse {
-  0% {
-    transform: scale(1.045) translate3d(-0.7%, 0.45%, 0);
-  }
-
-  50% {
-    transform: scale(1.057) translate3d(-0.05%, 0.05%, 0);
-  }
-
-  100% {
-    transform: scale(1.07) translate3d(0.62%, -0.42%, 0);
-  }
-}
-
-@keyframes campus-gallery-kenburns-center {
-  0% {
-    transform: scale(1.043) translate3d(0.18%, -0.52%, 0);
-  }
-
-  50% {
-    transform: scale(1.056) translate3d(-0.2%, -0.08%, 0);
-  }
-
-  100% {
-    transform: scale(1.068) translate3d(0.42%, 0.5%, 0);
   }
 }
