@@ -191,7 +191,7 @@ directory locally, or run `npm ci` and `npm run dev` on the PR branch to preview
 Weekly/manual validation also checks external links. Production deployment checks
 internal links and assets before uploading the site.
 
-Gallery controls support pause/play, keyboard access, automatic pause on hover/focus,
-and reduced-motion preferences. Mobile navigation closes on Escape, outside clicks,
+The homepage uses a static campus image without a slideshow control bar.
+Pointer parallax respects reduced-motion preferences. Mobile navigation closes on Escape, outside clicks,
 and focus leaving the menu. Global controls have visible focus outlines and minimum
 44px touch targets.
