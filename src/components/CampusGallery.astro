@@ -1,5 +1,10 @@
 ---
 import { getAssetHref } from '@/utils/urls';
+const images = [
+  { src: '/images/campus/woodlock-hall-library-table.jpg', alt: 'Reading table inside Woodlock Hall library at Dublin City University.' },
+  { src: '/images/campus/dcu-campus-hallway.jpg', alt: 'Glass-roof hallway on the Dublin City University campus.' },
+  { src: '/images/campus/dcu-glasnevin-library.jpg', alt: 'Interior view of the DCU Glasnevin library with skylight ceiling.' },
+];
 ---
 
 <section class="campus-gallery" aria-label="Dublin City University campus">
@@ -8,19 +13,54 @@ import { getAssetHref } from '@/utils/urls';
     data-hero-parallax
     data-hero-parallax-active="false"
   >
-    <figure class="campus-gallery__slide is-active">
-      <div class="campus-gallery__image-motion">
-        <img
-          src={getAssetHref('/images/campus/woodlock-hall-library-table.jpg')}
-          alt="Reading table inside Woodlock Hall library at Dublin City University."
-          class="campus-gallery__image"
-          loading="eager"
-          decoding="async"
-        />
-      </div>
-    </figure>
+    {images.map((image, index) => (
+      <figure class:list={['campus-gallery__slide', index === 0 && 'is-active']} aria-hidden={index !== 0}>
+        <div class="campus-gallery__image-motion">
+          <img src={getAssetHref(image.src)} alt={image.alt} class="campus-gallery__image" loading="eager" decoding="async" />
+        </div>
+      </figure>
+    ))}
     <div class="campus-gallery__overlay">
       <slot />
     </div>
   </div>
 </section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.campus-gallery').forEach(gallery => {
+    const slides = [...gallery.querySelectorAll<HTMLElement>('.campus-gallery__slide')];
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let index = 0;
+    let timer: ReturnType<typeof setInterval> | undefined;
+    let cleanup: ReturnType<typeof setTimeout> | undefined;
+    const rotate = () => {
+      const previous = slides[index];
+      index = (index + 1) % slides.length;
+      previous.classList.remove('is-active');
+      previous.classList.add('is-leaving');
+      previous.setAttribute('aria-hidden', 'true');
+      slides[index].classList.add('is-active');
+      slides[index].setAttribute('aria-hidden', 'false');
+      cleanup = setTimeout(() => previous.classList.remove('is-leaving'), 900);
+    };
+    const sync = () => {
+      clearInterval(timer);
+      if (motion.matches) {
+        clearTimeout(cleanup);
+        index = 0;
+        slides.forEach((slide, i) => {
+          slide.classList.remove('is-leaving');
+          slide.classList.toggle('is-active', i === 0);
+          slide.setAttribute('aria-hidden', String(i !== 0));
+        });
+      }
+      if (!motion.matches && !document.hidden && slides.length > 1) timer = setInterval(rotate, 2000);
+    };
+    // Decode all photographs before starting so each dissolve has a ready image.
+    Promise.all([...gallery.querySelectorAll('img')].map(image => image.decode().catch(() => {}))).then(() => {
+      sync();
+      motion.addEventListener('change', sync);
+      document.addEventListener('visibilitychange', sync);
+    });
+  });
+</script>

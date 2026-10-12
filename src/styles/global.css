@@ -409,8 +409,8 @@
 
   .campus-gallery {
     @apply relative;
-    --gallery-rotation-duration: 12000ms;
-    --gallery-fade-duration: 1200ms;
+    --gallery-rotation-duration: 2000ms;
+    --gallery-fade-duration: 900ms;
     --gallery-motion-ease: cubic-bezier(0.4, 0, 0.2, 1);
   }
 

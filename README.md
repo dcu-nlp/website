@@ -191,7 +191,8 @@ directory locally, or run `npm ci` and `npm run dev` on the PR branch to preview
 Weekly/manual validation also checks external links. Production deployment checks
 internal links and assets before uploading the site.
 
-The homepage uses a static campus image without a slideshow control bar.
+The homepage automatically dissolves between three campus images every two seconds,
+without visible controls. Reduced-motion preferences keep the first image still.
 Pointer parallax respects reduced-motion preferences. Mobile navigation closes on Escape, outside clicks,
 and focus leaving the menu. Global controls have visible focus outlines and minimum
 44px touch targets.
