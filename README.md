@@ -119,7 +119,9 @@ The scheduled workflow lives in `.github/workflows/sync-publications.yml` and ru
 ## SEO, feeds, and metadata
 
 - SEO tags are handled in `src/components/Seo.astro`.
-- Sitemap generation is enabled through `@astrojs/sitemap`.
+- Search indexing is disabled during development through a site-wide `noindex, nofollow, noimageindex` meta tag in `src/components/Seo.astro`.
+- Sitemap generation and its robots.txt advertisement are disabled. To launch, remove the robots meta tag, restore `@astrojs/sitemap` in `astro.config.mjs`, and restore the sitemap URL in `src/pages/robots.txt.ts`.
+- Crawling stays allowed so search engines can read the `noindex` directive. These changes take effect after deployment; they do not make the public site private.
 - News RSS is generated at `/rss.xml`.
 - Robots output is generated at `/robots.txt`.
 

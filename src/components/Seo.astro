@@ -24,6 +24,8 @@ const imageUrl = new URL(getAssetHref(image), site).toString();
 ---
 
 <title>{pageTitle}</title>
+<!-- Development site: remove this directive when the site is ready to launch. -->
+<meta name="robots" content="noindex, nofollow, noimageindex" />
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
 <meta property="og:title" content={pageTitle} />

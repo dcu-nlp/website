@@ -1,12 +1,7 @@
-interface Props {
-  site: URL;
-}
-
-export function GET({ site }: Props) {
-  const sitemap = new URL('sitemap-index.xml', site);
-
+export function GET() {
+  // Crawlers must access pages to read their noindex meta tags.
   return new Response(
-    `User-agent: *\nAllow: /\nSitemap: ${sitemap.toString()}\n`,
+    `User-agent: *\nAllow: /\n`,
     {
       headers: {
         'Content-Type': 'text/plain; charset=utf-8',

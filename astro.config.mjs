@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
 const repository =
@@ -15,7 +14,8 @@ export default defineConfig({
   site,
   base,
   output: 'static',
-  integrations: [mdx(), sitemap()],
+  // Enable sitemap generation again when the site is ready for indexing.
+  integrations: [mdx()],
   markdown: {
     shikiConfig: {
       theme: 'github-dark',
